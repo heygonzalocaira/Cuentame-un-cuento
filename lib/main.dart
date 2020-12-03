@@ -70,25 +70,13 @@ class _MyHomePageState extends State<MyHomePage> {
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-                width: 250,
-                height: 150,
-                color: Colors.black,
-                child: Image.asset(
-                  'assets/init/arma.png',
-                  fit: BoxFit.fill,
-                )),
-          ),
-          Align(
-            alignment: Alignment.center,
-            child: IconButton(
-              icon: new Icon(
-                Icons.play_circle_fill,
-                size: 100,
+              width: 350,
+              height: 150,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/init/arma.png'),
+                    fit: BoxFit.fitHeight),
               ),
-              highlightColor: Colors.lightBlue,
-              onPressed: () {
-                print("ah prro");
-              },
             ),
           ),
           Align(
@@ -96,7 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
                 width: 80,
                 height: 100,
-                color: Colors.black,
                 child: Image.asset(
                   'assets/init/sonder.png',
                   fit: BoxFit.fill,
@@ -107,7 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
                 width: 80,
                 height: 80,
-                color: Colors.black,
                 child: Image.asset(
                   'assets/init/cs.png',
                   fit: BoxFit.fill,
@@ -118,11 +104,20 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
                 width: 80,
                 height: 80,
-                color: Colors.black,
                 child: Image.asset(
                   'assets/init/unsa.png',
                   fit: BoxFit.fill,
                 )),
+          ),
+          Center(
+            child: IconButton(
+              icon: Icon(Icons.play_circle_fill),
+              color: Colors.blue,
+              iconSize: 80,
+              onPressed: () {
+                print("Ah prro");
+              },
+            ),
           ),
         ],
       ))),
