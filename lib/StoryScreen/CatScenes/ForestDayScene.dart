@@ -4,7 +4,7 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestNightScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/RiverScene.dart';
 import 'package:get/get.dart';
 
 class ForestDayScene extends StatefulWidget {
@@ -56,7 +56,7 @@ class _ForestDaySceneState extends State<ForestDayScene> {
               color: Colors.blue,
               iconSize: 80,
               onPressed: () {
-                Get.to(ForestNightScene());
+                Get.to(RiverScene());
               },
             ),
           ),

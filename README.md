@@ -5,8 +5,10 @@ Descripción
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 <div align="center">
-<img src="https://www.lalocadelosgatos.com/wp-content/uploads/2010/10/gato-tecladoo.gif" height="250" />
+![alt text](https://github.com/madscientistCS/arma_tucuento/blob/main/assets/init/main.png?raw=true)
 </div>
+
+
 
 ## Screenshots
 

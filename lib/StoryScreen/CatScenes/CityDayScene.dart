@@ -30,7 +30,7 @@ class _CityDaySceneState extends State<CityDayScene> {
           MainBackground(
             widthScreen: widthScreen,
             heightScreen: heightScreen,
-            imagePath: 'assets/Scenes/nuevo_fondo.png',
+            imagePath: 'assets/Scenes/day.png',
           ),
           MainBackground(
             widthScreen: widthScreen,
