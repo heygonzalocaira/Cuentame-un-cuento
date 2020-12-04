@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:arma_tu_cuento/iconbutton.dart';
+import 'package:arma_tu_cuento/MainBackground.dart';
+import 'package:arma_tu_cuento/ContainerImage.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,41 +62,25 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Center(
               child: Stack(
         children: <Widget>[
-          Container(
-              width: widthScreen,
-              height: heightScreen,
-              color: Colors.black,
-              child: Image.asset(
-                'assets/init/background.png',
-                fit: BoxFit.fill,
-              )),
-          Align(
-            alignment: Alignment.topCenter,
-            child: Container(
-              width: 350,
-              height: 150,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/init/arma.png'),
-                    fit: BoxFit.fitHeight),
-              ),
-            ),
+          MainBackground(
+            widthScreen: widthScreen,
+            heightScreen: heightScreen,
+            imagePath: 'assets/init/background.png',
           ),
           Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-                width: 80,
-                height: 100,
-                child: Image.asset(
-                  'assets/init/sonder.png',
-                  fit: BoxFit.fill,
-                )),
-          ),
+              alignment: Alignment.topCenter,
+              child: ContainerImage(
+                  width: 350, height: 150, imagePath: 'assets/init/arma.png')),
+          Align(
+              alignment: Alignment.bottomCenter,
+              child: ContainerImage(
+                  width: 90, height: 120, imagePath: 'assets/init/sonder.png')),
           Align(
             alignment: Alignment.bottomLeft,
             child: Container(
+                margin: const EdgeInsets.only(left: 10.0, bottom: 5),
                 width: 80,
-                height: 80,
+                height: 70,
                 child: Image.asset(
                   'assets/init/cs.png',
                   fit: BoxFit.fill,
@@ -102,7 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
           Align(
             alignment: Alignment.bottomRight,
             child: Container(
-                width: 80,
+                margin: const EdgeInsets.only(right: 10.0, bottom: 5),
+                width: 70,
                 height: 80,
                 child: Image.asset(
                   'assets/init/unsa.png',
@@ -113,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: IconButton(
               icon: Icon(Icons.play_circle_fill),
               color: Colors.blue,
-              iconSize: 80,
+              iconSize: 100,
               onPressed: () {
                 print("Ah prro");
               },
