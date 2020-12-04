@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TopButtons extends StatelessWidget {
+class BottomButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Row(
         children: [
+          SizedBox(
+            width: 250,
+          ),
           IconButton(
-            icon: Icon(Icons.undo_outlined),
+            icon: Icon(Icons.navigate_before),
             color: Colors.blue,
             iconSize: 80,
             onPressed: () {
@@ -16,13 +19,14 @@ class TopButtons extends StatelessWidget {
             },
           ),
           Expanded(child: SizedBox()),
-          IconButton(
-            icon: Icon(Icons.settings),
-            color: Colors.blue,
-            iconSize: 80,
-            onPressed: () {
-              print("Settings");
-            },
+          //IconButton( // el boton debe dar a la siguiente pantalla
+          //  icon: Icon(Icons.navigate_next),
+          //  color: Colors.blue,
+          //  iconSize: 80,
+          //  onPressed: () {},
+          //),
+          SizedBox(
+            width: 250,
           ),
         ],
       ),

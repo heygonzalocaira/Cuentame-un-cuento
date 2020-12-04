@@ -6,20 +6,18 @@ import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
 import 'package:get/get.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(GetMaterialApp(home: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Arma tu cuento',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainScreen(title: 'Flutter Demo Home Page'),
+      home: MainScreen(title: 'Arma tu cuento'),
     );
   }
 }
@@ -105,8 +103,7 @@ class _MainScreenState extends State<MainScreen> {
               color: Colors.blue,
               iconSize: 100,
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MenuScreen()));
+                Get.to(MenuScreen());
               },
             ),
           ),
