@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:arma_tu_cuento/iconbutton.dart';
-import 'package:arma_tu_cuento/MainBackground.dart';
-import 'package:arma_tu_cuento/ContainerImage.dart';
+//import 'package:arma_tu_cuento/iconbutton.dart';
+import 'package:arma_tu_cuento/Components/MainBackground.dart';
+import 'package:arma_tu_cuento/Components/ContainerImage.dart';
+import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,20 +19,20 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MainScreen(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class MainScreen extends StatefulWidget {
+  MainScreen({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
@@ -103,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.blue,
               iconSize: 100,
               onPressed: () {
-                print("Ah prro");
+                Get.to(MenuScreen());
               },
             ),
           ),
