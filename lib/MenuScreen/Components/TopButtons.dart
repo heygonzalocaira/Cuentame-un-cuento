@@ -7,17 +7,21 @@ class TopButtons extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            icon: Icon(Icons.play_circle_fill),
+            icon: Icon(Icons.undo_outlined),
             color: Colors.blue,
-            iconSize: 100,
-            onPressed: () {},
+            iconSize: 80,
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
           Expanded(child: SizedBox()),
           IconButton(
-            icon: Icon(Icons.play_circle_fill),
+            icon: Icon(Icons.settings),
             color: Colors.blue,
-            iconSize: 100,
-            onPressed: () {},
+            iconSize: 80,
+            onPressed: () {
+              print("Settings");
+            },
           ),
         ],
       ),

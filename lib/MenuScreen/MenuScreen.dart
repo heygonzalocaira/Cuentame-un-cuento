@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
+//import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
+import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
+import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 
 class MenuScreen extends StatefulWidget {
   MenuScreen({Key key, this.title}) : super(key: key);
@@ -29,6 +31,28 @@ class _MenuScreenState extends State<MenuScreen> {
             imagePath: 'assets/init/background.png',
           ),
           TopButtons(),
+          Positioned(
+              left: 200,
+              bottom: 150,
+              child: ContainerImage(
+                  width: 90, height: 120, imagePath: 'assets/init/sonder.png')),
+          Positioned(
+              right: 200,
+              bottom: 150,
+              child: ContainerImage(
+                  width: 90, height: 120, imagePath: 'assets/init/sonder.png')),
+          Positioned(
+              left: 150,
+              bottom: 40,
+              child: OptionButton(
+                words: "Crear\nCuento",
+              )),
+          Positioned(
+              right: 150,
+              bottom: 40,
+              child: OptionButton(
+                words: "Ver\nHistorias\nGuardadas",
+              )),
         ],
       ))),
     );
