@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/SelectAnimalScreen.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityCatScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityDayScene.dart';
 
 class OptionButton extends StatelessWidget {
   const OptionButton({
@@ -14,7 +14,7 @@ class OptionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.to(CityCatScene());
+        Get.to(CityDayScene());
         //Navigator.push(context,
         //    MaterialPageRoute(builder: (context) => SelectAnimalScreen()));
       },
