@@ -105,7 +105,8 @@ class _MainScreenState extends State<MainScreen> {
               color: Colors.blue,
               iconSize: 100,
               onPressed: () {
-                Get.to(MenuScreen());
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MenuScreen()));
               },
             ),
           ),
