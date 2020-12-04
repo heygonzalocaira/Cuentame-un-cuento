@@ -5,7 +5,7 @@ Descripción
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 <div align="center">
-![alt text](https://github.com/madscientistCS/arma_tucuento/blob/main/assets/init/main.png?raw=true)
+<img src="assets/init/main.png" width="600" alt="accessibility text">
 </div>
 
 
@@ -14,8 +14,8 @@ Descripción
 
 |     |     |    |
 | :-: | :-: |:-: |
-|  Screen | Screen | Screen |
-| <img src="https://www.sectorcine.com/wp-content/uploads/sectorcine/2017/06/26/typing.gif" height="250" /> | <img src="https://www.sectorcine.com/wp-content/uploads/sectorcine/2017/06/26/typing.gif" height="250" /> | <img src="https://www.sectorcine.com/wp-content/uploads/sectorcine/2017/06/26/typing.gif" height="250" /> |
+|  Scenes | Scenes | Scenes |
+| <img src="assets/Scenes/city.png" width="300" > | <img src="assets/Scenes/dayforest.png" width="300" >  | <img src="assets/Scenes/river.png" width="300" > |
 
 
 ## Installation
