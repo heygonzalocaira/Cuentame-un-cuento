@@ -7,15 +7,15 @@ import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
 import 'package:get/get.dart';
 
-class EndScene extends StatefulWidget {
-  EndScene({Key key, this.title}) : super(key: key);
+class PreQuestionScenario extends StatefulWidget {
+  PreQuestionScenario({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _EndSceneState createState() => _EndSceneState();
+  _PreQuestionScenarioState createState() => _PreQuestionScenarioState();
 }
 
-class _EndSceneState extends State<EndScene> {
+class _PreQuestionScenarioState extends State<PreQuestionScenario> {
   @override
   Widget build(BuildContext context) {
     double widthScreen;
@@ -40,8 +40,11 @@ class _EndSceneState extends State<EndScene> {
               imagePath: 'assets/init/finhistoria.png',
             ),
           ),*/
-          Center(
+          Align(
+              alignment: Alignment.bottomCenter,
               child: Container(
+                  height: 200,
+                  width: 200,
                   child: ConstrainedBox(
                       constraints: BoxConstraints.expand(),
                       child: FlatButton(
@@ -49,21 +52,9 @@ class _EndSceneState extends State<EndScene> {
                             Get.to(ForestDayScene());
                           },
                           padding: EdgeInsets.all(0.0),
-                          child: Image.asset('assets/init/finhistoria.png'))))),
-          Positioned(
-              left: 100,
-              bottom: 5,
-              child: ContainerImage(
-                  width: 120,
-                  height: 120,
-                  imagePath: 'assets/Characters/felix_run1.png')),
-          Positioned(
-              right: 100,
-              bottom: 5,
-              child: ContainerImage(
-                  width: 90,
-                  height: 120,
-                  imagePath: 'assets/Characters/sonder_run2.png')),
+                          child:
+                              Image.asset('assets/init/gatopregunta.png'))))),
+
           BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
           Positioned(
             right: 250,

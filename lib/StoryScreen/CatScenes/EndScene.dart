@@ -1,3 +1,4 @@
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
@@ -50,20 +51,7 @@ class _EndSceneState extends State<EndScene> {
                           },
                           padding: EdgeInsets.all(0.0),
                           child: Image.asset('assets/init/finhistoria.png'))))),
-          Positioned(
-              left: 100,
-              bottom: 5,
-              child: ContainerImage(
-                  width: 120,
-                  height: 120,
-                  imagePath: 'assets/Characters/felix_run1.png')),
-          Positioned(
-              right: 100,
-              bottom: 5,
-              child: ContainerImage(
-                  width: 90,
-                  height: 120,
-                  imagePath: 'assets/Characters/sonder_run2.png')),
+
           BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
           Positioned(
             right: 250,
