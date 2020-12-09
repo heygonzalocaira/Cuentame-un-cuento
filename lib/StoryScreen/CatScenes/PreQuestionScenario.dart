@@ -4,7 +4,7 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/PreQuestionScenario.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
 import 'package:get/get.dart';
 
 class EndScene extends StatefulWidget {
@@ -46,7 +46,7 @@ class _EndSceneState extends State<EndScene> {
                       constraints: BoxConstraints.expand(),
                       child: FlatButton(
                           onPressed: () {
-                            Get.to(PreQuestionScenario());
+                            Get.to(ForestDayScene());
                           },
                           padding: EdgeInsets.all(0.0),
                           child: Image.asset('assets/init/finhistoria.png'))))),
