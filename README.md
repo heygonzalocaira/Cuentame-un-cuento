@@ -3,17 +3,20 @@
 Descripción
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+![Lines of code](https://img.shields.io/tokei/lines/github/madscientistCS/Arma-tu-cuento)
 
 <div align="center">
-<img src="https://www.lalocadelosgatos.com/wp-content/uploads/2010/10/gato-tecladoo.gif" height="250" />
+<img src="assets/init/main.png" width="600" alt="accessibility text">
 </div>
+
+
 
 ## Screenshots
 
 |     |     |    |
 | :-: | :-: |:-: |
-|  Screen | Screen | Screen |
-| <img src="https://www.sectorcine.com/wp-content/uploads/sectorcine/2017/06/26/typing.gif" height="250" /> | <img src="https://www.sectorcine.com/wp-content/uploads/sectorcine/2017/06/26/typing.gif" height="250" /> | <img src="https://www.sectorcine.com/wp-content/uploads/sectorcine/2017/06/26/typing.gif" height="250" /> |
+|  Scenes | Scenes | Scenes |
+| <img src="assets/Scenes/city.png" width="300" > | <img src="assets/Scenes/dayforest.png" width="300" >  | <img src="assets/Scenes/river.png" width="300" > |
 
 
 ## Installation

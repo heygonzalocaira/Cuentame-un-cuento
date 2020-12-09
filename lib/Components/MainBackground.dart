@@ -17,7 +17,6 @@ class MainBackground extends StatelessWidget {
     return Container(
         width: widthScreen,
         height: heightScreen,
-        color: Colors.black,
         child: Image.asset(
           imagePath,
           fit: BoxFit.fill,
