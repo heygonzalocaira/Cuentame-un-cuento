@@ -30,9 +30,12 @@ class _EndSceneState extends State<EndScene> {
           MainBackground(
             widthScreen: widthScreen,
             heightScreen: heightScreen,
-            imagePath: 'assets/init/background',
+            imagePath: 'assets/init/background.png',
           ),
           TopButtons(),
+          Center(
+            
+          )
           Positioned(
               left: 100,
               bottom: 5,

@@ -4,7 +4,7 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityNightScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/EndScene.dart';
 import 'package:get/get.dart';
 
 class RiverScene extends StatefulWidget {
@@ -55,7 +55,9 @@ class _RiverSceneState extends State<RiverScene> {
               icon: Icon(Icons.navigate_next),
               color: Colors.blue,
               iconSize: 80,
-              onPressed: () {},
+              onPressed: () {
+                Get.to(EndScene());
+              },
             ),
           ),
         ],
