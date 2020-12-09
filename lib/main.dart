@@ -100,14 +100,26 @@ class _MainScreenState extends State<MainScreen> {
                 )),
           ),
           Center(
-            child: IconButton(
-              icon: Icon(Icons.play_circle_fill),
-              color: Colors.blue,
-              iconSize: 100,
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MenuScreen()));
-              },
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                /*border: Border.all(
+                  color: Colors.transparent,
+                  //width: 8.0,
+                ),*/
+                borderRadius: BorderRadius.all(Radius.circular(90.0)
+                    //width: 10.0, //         <--- border radius here
+                    ),
+              ),
+              child: IconButton(
+                icon: Icon(Icons.play_circle_fill),
+                color: Colors.blue,
+                iconSize: 100,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MenuScreen()));
+                },
+              ),
             ),
           ),
         ],
