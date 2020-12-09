@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:arma_tu_cuento/MenuScreen/Components/SelectAnimalScreen.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityDayScene.dart';
 
 class OptionButton extends StatelessWidget {
