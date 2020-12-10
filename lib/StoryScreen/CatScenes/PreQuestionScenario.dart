@@ -54,6 +54,70 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                           padding: EdgeInsets.all(0.0),
                           child:
                               Image.asset('assets/init/gatopregunta.png'))))),
+          Align(
+              alignment: AlignmentDirectional(0.0, -0.5),
+              child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.lightBlue,
+                      width: 4.0,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(8.0)
+                        //width: 10.0, //         <--- border radius here
+                        ),
+                  ),
+                  height: 60,
+                  width: 230,
+                  child: RaisedButton.icon(
+                    textColor: Colors.black,
+                    color: Colors.white,
+                    onPressed: () {
+                      // Respond to button press
+                    },
+                    icon: Icon(Icons.add, size: 0),
+                    label: Text("ES HORA DE UN PEQUEÑO \nCUESTIONARIO"),
+                  ))),
+/*
+          Align(
+              alignment: AlignmentDirectional(0.0, -0.5),
+              child: Container(
+                  height: 80,
+                  width: 230,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.lightBlue,
+                      width: 4.0,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(8.0)
+                        //width: 10.0, //         <--- border radius here
+                        ),
+                  ),
+                  child: Center(
+                    child: TextField(
+                      // use the text align property
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        labelText: 'ES HORA DE UN PEQUEÑO \NCUESTIONARIO',
+                      ),
+                    ),
+                  ))),
+*/
+          Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                  height: 200,
+                  width: 200,
+                  child: ConstrainedBox(
+                      constraints: BoxConstraints.expand(),
+                      child: FlatButton(
+                          onPressed: () {
+                            /*Get.to(ForestDayScene());*/
+                          },
+                          padding: EdgeInsets.all(0.0),
+                          child:
+                              Image.asset('assets/init/gatopregunta.png'))))),
 
           BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
           Positioned(
