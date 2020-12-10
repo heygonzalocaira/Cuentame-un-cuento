@@ -15,11 +15,12 @@ class MainBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: widthScreen,
-        height: heightScreen,
-        child: Image.asset(
-          imagePath,
-          fit: BoxFit.fill,
-        ));
+      width: widthScreen,
+      height: heightScreen,
+      child: Image.asset(
+        imagePath,
+        fit: BoxFit.fill,
+      ),
+    );
   }
 }

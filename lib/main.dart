@@ -59,66 +59,74 @@ class _MainScreenState extends State<MainScreen> {
     heightScreen = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
-          child: Center(
-              child: Stack(
-        children: <Widget>[
-          MainBackground(
-            widthScreen: widthScreen,
-            heightScreen: heightScreen,
-            imagePath: 'assets/init/background.png',
-          ),
-          Align(
-              alignment: Alignment.topCenter,
-              child: ContainerImage(
-                  width: 350, height: 150, imagePath: 'assets/init/arma.png')),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: ContainerImage(
-                  width: 90, height: 120, imagePath: 'assets/init/sonder.png')),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: Container(
-                margin: const EdgeInsets.only(left: 10.0, bottom: 5),
-                width: 80,
-                height: 70,
-                child: Image.asset(
-                  'assets/init/cs.png',
-                  fit: BoxFit.fill,
-                )),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-                margin: const EdgeInsets.only(right: 10.0, bottom: 5),
-                width: 70,
-                height: 80,
-                child: Image.asset(
-                  'assets/init/unsa.png',
-                  fit: BoxFit.fill,
-                )),
-          ),
-          Center(
-              child: ClipOval(
-            child: Material(
-              color: Colors.white, // button color
-              child: InkWell(
-                splashColor: Colors.blueGrey, // inkwell color
-                child: SizedBox(
-                    width: 100,
-                    height: 100,
-                    child: Icon(
-                      Icons.play_circle_fill,
-                      size: 100,
-                      color: Colors.blue,
-                    )),
-                onTap: () {
-                  Get.to(MenuScreen());
-                },
+        child: Center(
+          child: Stack(
+            children: <Widget>[
+              MainBackground(
+                widthScreen: widthScreen,
+                heightScreen: heightScreen,
+                imagePath: 'assets/init/background.png',
               ),
-            ),
-          )),
-        ],
-      ))),
+              Align(
+                alignment: Alignment.topCenter,
+                child: ContainerImage(
+                    width: 350, height: 150, imagePath: 'assets/init/arma.png'),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: ContainerImage(
+                    width: 90,
+                    height: 120,
+                    imagePath: 'assets/init/sonder.png'),
+              ),
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  margin: const EdgeInsets.only(left: 10.0, bottom: 5),
+                  width: 80,
+                  height: 70,
+                  child: Image.asset(
+                    'assets/init/cs.png',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  margin: const EdgeInsets.only(right: 10.0, bottom: 5),
+                  width: 70,
+                  height: 80,
+                  child: Image.asset(
+                    'assets/init/unsa.png',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+              Center(
+                  child: ClipOval(
+                child: Material(
+                  color: Colors.white, // button color
+                  child: InkWell(
+                    splashColor: Colors.blueGrey, // inkwell color
+                    child: SizedBox(
+                        width: 100,
+                        height: 100,
+                        child: Icon(
+                          Icons.play_circle_fill,
+                          size: 100,
+                          color: Colors.blue,
+                        )),
+                    onTap: () {
+                      Get.to(MenuScreen());
+                    },
+                  ),
+                ),
+              )),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -15,7 +15,9 @@ class TopButtons extends StatelessWidget {
               Get.back();
             },
           ),
-          Expanded(child: SizedBox()),
+          Expanded(
+            child: SizedBox(),
+          ),
           IconButton(
             icon: Icon(Icons.settings),
             color: Colors.blue,

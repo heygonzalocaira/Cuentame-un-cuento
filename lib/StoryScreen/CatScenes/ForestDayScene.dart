@@ -24,44 +24,48 @@ class _ForestDaySceneState extends State<ForestDayScene> {
     heightScreen = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
-          child: Center(
-              child: Stack(
-        children: <Widget>[
-          MainBackground(
-            widthScreen: widthScreen,
-            heightScreen: heightScreen,
-            imagePath: 'assets/Scenes/dayforest.png',
+        child: Center(
+          child: Stack(
+            children: <Widget>[
+              MainBackground(
+                widthScreen: widthScreen,
+                heightScreen: heightScreen,
+                imagePath: 'assets/Scenes/dayforest.png',
+              ),
+              TopButtons(),
+              Positioned(
+                left: 100,
+                bottom: 5,
+                child: ContainerImage(
+                    width: 120,
+                    height: 120,
+                    imagePath: 'assets/Characters/felix_run1.png'),
+              ),
+              Positioned(
+                right: 100,
+                bottom: 5,
+                child: ContainerImage(
+                    width: 90,
+                    height: 120,
+                    imagePath: 'assets/Characters/sonder_run2.png'),
+              ),
+              BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
+              Positioned(
+                right: 250,
+                child: IconButton(
+                  // el boton debe dar a la siguiente pantalla
+                  icon: Icon(Icons.navigate_next),
+                  color: Colors.blue,
+                  iconSize: 80,
+                  onPressed: () {
+                    Get.to(RiverScene());
+                  },
+                ),
+              ),
+            ],
           ),
-          TopButtons(),
-          Positioned(
-              left: 100,
-              bottom: 5,
-              child: ContainerImage(
-                  width: 120,
-                  height: 120,
-                  imagePath: 'assets/Characters/felix_run1.png')),
-          Positioned(
-              right: 100,
-              bottom: 5,
-              child: ContainerImage(
-                  width: 90,
-                  height: 120,
-                  imagePath: 'assets/Characters/sonder_run2.png')),
-          BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
-          Positioned(
-            right: 250,
-            child: IconButton(
-              // el boton debe dar a la siguiente pantalla
-              icon: Icon(Icons.navigate_next),
-              color: Colors.blue,
-              iconSize: 80,
-              onPressed: () {
-                Get.to(RiverScene());
-              },
-            ),
-          ),
-        ],
-      ))),
+        ),
+      ),
     );
   }
 }

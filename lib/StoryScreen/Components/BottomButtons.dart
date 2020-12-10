@@ -18,7 +18,9 @@ class BottomButtons extends StatelessWidget {
               Get.back();
             },
           ),
-          Expanded(child: SizedBox()),
+          Expanded(
+            child: SizedBox(),
+          ),
           //IconButton( // el boton debe dar a la siguiente pantalla
           //  icon: Icon(Icons.navigate_next),
           //  color: Colors.blue,
