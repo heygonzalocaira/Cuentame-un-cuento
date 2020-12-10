@@ -98,26 +98,25 @@ class _MainScreenState extends State<MainScreen> {
                 )),
           ),
           Center(
-            child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  /*border: Border.all(
-                  color: Colors.transparent,
-                  //width: 8.0,
-                ),*/
-                  borderRadius: BorderRadius.all(Radius.circular(90.0)
-                      //width: 10.0, //         <--- border radius here
-                      ),
-                ),
-                child: IconButton(
-                  icon: Icon(Icons.play_circle_fill),
-                  color: Colors.blue,
-                  iconSize: 100,
-                  onPressed: () {
-                    Get.to(MenuScreen());
-                  },
-                )),
-          ),
+              child: ClipOval(
+            child: Material(
+              color: Colors.white, // button color
+              child: InkWell(
+                splashColor: Colors.blueGrey, // inkwell color
+                child: SizedBox(
+                    width: 100,
+                    height: 100,
+                    child: Icon(
+                      Icons.play_circle_fill,
+                      size: 100,
+                      color: Colors.blue,
+                    )),
+                onTap: () {
+                  Get.to(MenuScreen());
+                },
+              ),
+            ),
+          )),
         ],
       ))),
     );

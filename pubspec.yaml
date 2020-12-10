@@ -30,8 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   get: ^3.21.3
 
-  flame:
-    path: ../../../
+  
 
 dev_dependencies:
   flutter_test:
