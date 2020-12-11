@@ -5,6 +5,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/QuestionScene.dart';
 import 'package:get/get.dart';
 
 class PreQuestionScenario extends StatefulWidget {
@@ -41,7 +42,7 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                     constraints: BoxConstraints.expand(),
                     child: FlatButton(
                       onPressed: () {
-                        Get.to(ForestDayScene());
+                        
                       },
                       padding: EdgeInsets.all(0.0),
                       child: Image.asset('assets/init/gatopregunta.png'),
@@ -66,7 +67,7 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                     textColor: Colors.black,
                     color: Colors.white,
                     onPressed: () {
-                      // Respond to button press
+                      Get.to(Ouestions());// Respond to button press
                     },
                     icon: Icon(Icons.add, size: 0),
                     label: Text("ES HORA DE UN PEQUEÑO \nCUESTIONARIO"),
