@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
-//import 'package:arma_tu_cuento/Components/ContainerImage.dart';
+import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/EndScene.dart';
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
 import 'package:get/get.dart';
 
 class RiverScene extends StatefulWidget {
@@ -16,6 +18,14 @@ class RiverScene extends StatefulWidget {
 }
 
 class _RiverSceneState extends State<RiverScene> {
+  final Map choices = {
+    ConstantsImages.img_ball: Colors.green,
+    ConstantsImages.img_bottle: Colors.yellow,
+    ConstantsImages.img_wood: Colors.red,
+  };
+
+  bool accepted = false;
+
   @override
   Widget build(BuildContext context) {
     double widthScreen;
@@ -49,7 +59,65 @@ class _RiverSceneState extends State<RiverScene> {
                     height: 120,
                     imagePath: 'assets/Characters/sonder_run2.png'),
               ),
-              BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
+              BottomButtons(),
+              Positioned(
+                left: 30,
+                bottom: 170,
+                child: Container(
+                  width: 300,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(90),
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 25,
+                bottom: 190,
+                child: accepted
+                    ? Container()
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: choices.keys.map((images) {
+                          return Draggable<String>(
+                            data: images,
+                            child: FeedbackContainerImage(
+                              width: 100,
+                              height: 65,
+                              imagePath: images,
+                            ), // user's wiew when they're not hace interactions
+                            feedback: FeedbackContainerImage(
+                              width: 100,
+                              height: 65,
+                              imagePath: images,
+                            ), // when the user start to drag
+                            childWhenDragging:
+                                Container(), // when//display the original child when it's being dragged now
+                          );
+                        }).toList()),
+              ),
+              Positioned(
+                bottom: 40,
+                left: 280,
+                child: DragTarget(
+                  builder: (context, List<String> data, rj) {
+                    return Container(
+                      width: 200,
+                      height: 100,
+                    );
+                  },
+                  onAccept: (data) {
+                    if (data == ConstantsImages.img_wood) {
+                      setState(() {
+                        Get.to(ForestDayScene());
+                        accepted = true;
+                      });
+                    }
+                  },
+                ),
+              ),
               Positioned(
                 right: 250,
                 child: IconButton(
@@ -69,3 +137,46 @@ class _RiverSceneState extends State<RiverScene> {
     );
   }
 }
+
+// ejemplo para mover objetos
+//Positioned(
+//                top: 50,
+//                bottom: 150,
+//                child: accepted
+//                    ? Container()
+//                    : Draggable(
+//                        feedback: Container(
+//                          color: Colors.blue[100],
+//                          width: 100,
+//                          height: 100,
+//                        ),
+//                        child: Container(
+//                          color: Colors.blue,
+//                          height: 100,
+//                          width: 100,
+//                        ),
+//                        childWhenDragging: Container(),
+//                        data: "kotak",
+//                      ),
+//              ),
+//              Positioned(
+//                top: 100,
+//                left: 400,
+//                child: DragTarget(
+//                  builder: (context, List<String> data, rj) {
+//                    return Container(
+//                      color: warnaBg,
+//                      width: 100,
+//                      height: 100,
+//                    );
+//                  },
+//                  onAccept: (data) {
+//                    if (data == 'kotak') {
+//                      setState(() {
+//                        warnaBg = Colors.blue[700];
+//                        accepted = true;
+//                      });
+//                    }
+//                  },
+//                ),
+//              ),

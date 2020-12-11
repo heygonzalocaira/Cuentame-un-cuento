@@ -20,7 +20,6 @@ class OptionButton extends StatelessWidget {
           color: const Color(0xff3b88c3),
           width: 8,
         ),
-        borderRadius: BorderRadius.circular(12),
       ),
       child: Center(
         child: Text(

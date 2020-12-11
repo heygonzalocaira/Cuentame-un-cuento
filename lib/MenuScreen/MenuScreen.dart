@@ -57,7 +57,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     Get.to(CityDayScene());
                   },
                   child: OptionButton(
-                    words: "Crear\nCuento",
+                    words: "Crear",
                     size_words: 23.0,
                   ),
                 ),
@@ -70,7 +70,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     //Get.to(); //Poner el widget necesario
                   },
                   child: OptionButton(
-                    words: "Ver\nHistorias\nGuardadas",
+                    words: "Ver",
                     size_words: 23.0,
                   ),
                 ),

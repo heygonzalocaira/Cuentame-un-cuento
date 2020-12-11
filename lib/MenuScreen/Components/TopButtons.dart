@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_volume_slider/flutter_volume_slider.dart';
+import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
 
 class TopButtons extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class TopButtons extends StatelessWidget {
             color: Colors.blue,
             iconSize: 80,
             onPressed: () {
-              Get.back();
+              Get.to(MenuScreen());
             },
           ),
           Expanded(child: SizedBox()),
