@@ -60,13 +60,6 @@ class _MountainSceneState extends State<MountainScene> {
                     return Container(
                       width: 200,
                       height: 100,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color:
-                              Colors.red, //                   <--- border color
-                          width: 5.0,
-                        ),
-                      ),
                     );
                   },
                   onAccept: (data) {

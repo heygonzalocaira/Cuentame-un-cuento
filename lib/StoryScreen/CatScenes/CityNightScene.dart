@@ -60,13 +60,6 @@ class _CityNightSceneState extends State<CityNightScene> {
                     return Container(
                       width: 100,
                       height: 200,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color:
-                              Colors.red, //                   <--- border color
-                          width: 5.0,
-                        ),
-                      ),
                     );
                   },
                   onAccept: (data) {

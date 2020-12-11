@@ -60,21 +60,11 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     return Container(
                       width: 200,
                       height: 200,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color:
-                              Colors.red, //                   <--- border color
-                          width: 5.0,
-                        ),
-                      ),
                     );
                   },
                   onAccept: (data) {
                     if (data == 'assets/Characters/felix_run1.png') {
-                      setState(() {
-                        //Get.to(CityNightScene());
-                        accepted = true;
-                      });
+                      setState(() {});
                     }
                   },
                 ),
@@ -87,13 +77,6 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     return Container(
                       width: 200,
                       height: 200,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors
-                              .yellow, //                   <--- border color
-                          width: 5.0,
-                        ),
-                      ),
                     );
                   },
                   onAccept: (data) {
@@ -107,8 +90,8 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                 ),
               ),
               Positioned(
-                right: 350,
-                bottom: 100,
+                right: 250,
+                bottom: 80,
                 child: ContainerImage(
                     width: 90,
                     height: 120,

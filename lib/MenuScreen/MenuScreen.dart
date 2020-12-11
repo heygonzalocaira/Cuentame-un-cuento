@@ -6,6 +6,7 @@ import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityDayScene.dart';
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 
 class MenuScreen extends StatefulWidget {
   MenuScreen({Key key, this.title}) : super(key: key);
@@ -34,45 +35,53 @@ class _MenuScreenState extends State<MenuScreen> {
               ),
               TopButtons(),
               Positioned(
-                left: 200,
-                bottom: 150,
-                child: ContainerImage(
-                    width: 90,
-                    height: 120,
-                    imagePath: 'assets/init/sonder.png'),
-              ),
-              Positioned(
-                right: 200,
-                bottom: 150,
-                child: ContainerImage(
-                    width: 90,
-                    height: 120,
-                    imagePath: 'assets/init/sonder.png'),
-              ),
-              Positioned(
                 left: 150,
                 bottom: 40,
-                child: GestureDetector(
-                  onTap: () {
-                    Get.to(CityDayScene());
-                  },
-                  child: OptionButton(
-                    words: "Crear",
-                    size_words: 23.0,
-                  ),
+                child: Column(
+                  children: [
+                    ContainerImage(
+                      width: 130,
+                      height: 120,
+                      imagePath: ConstantsImages.img_menu_crear,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(CityDayScene());
+                      },
+                      child: OptionButton(
+                        words: "Crear",
+                        size_words: 23.0,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Positioned(
                 right: 150,
                 bottom: 40,
-                child: GestureDetector(
-                  onTap: () {
-                    //Get.to(); //Poner el widget necesario
-                  },
-                  child: OptionButton(
-                    words: "Ver",
-                    size_words: 23.0,
-                  ),
+                child: Column(
+                  children: [
+                    ContainerImage(
+                      width: 130,
+                      height: 120,
+                      imagePath: ConstantsImages.img_menu_ver,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        //Get.to(); //Poner el widget necesario
+                      },
+                      child: OptionButton(
+                        words: "Ver",
+                        size_words: 23.0,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
