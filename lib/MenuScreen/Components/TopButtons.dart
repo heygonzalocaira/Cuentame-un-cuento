@@ -27,7 +27,7 @@ class TopButtons extends StatelessWidget {
                 context: context,
                 builder: (context) {
                   return AlertDialog(
-                    title: Text("Settings"),
+                    title: Text("Opciones"),
                     content: SingleChildScrollView(
                       padding: EdgeInsets.all(10.0),
                       child: Column(
@@ -43,7 +43,7 @@ class TopButtons extends StatelessWidget {
                     actions: [
                       MaterialButton(
                         elevation: 5,
-                        child: Text('OK'),
+                        child: Text('ACEPTAR'),
                         onPressed: () {
                           Navigator.of(context).pop("Successful!");
                         },

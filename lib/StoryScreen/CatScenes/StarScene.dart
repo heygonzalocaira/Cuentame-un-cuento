@@ -5,6 +5,7 @@ import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:get/get.dart';
+import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
 
 class Stars extends StatefulWidget {
   Stars({Key key, this.title}) : super(key: key);
@@ -15,7 +16,6 @@ class Stars extends StatefulWidget {
 }
 
 class _StarsState extends State<Stars> {
-  bool flag  = false;
   @override
   Widget build(BuildContext context) {
     double widthScreen;
@@ -24,42 +24,43 @@ class _StarsState extends State<Stars> {
     heightScreen = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
-          child: Center(
-              child: Stack(
-        children: <Widget>[
-          MainBackground(
-            widthScreen: widthScreen,
-            heightScreen: heightScreen,
-            imagePath: 'assets/init/background.png',
-          ),
-          TopButtons(),
-          Align(
-                alignment: AlignmentDirectional(0.0, -0.9),
+        child: Center(
+          child: Stack(
+            children: <Widget>[
+              MainBackground(
+                widthScreen: widthScreen,
+                heightScreen: heightScreen,
+                imagePath: 'assets/init/background.png',
+              ),
+              TopButtons(),
+              Center(
                 child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.lightBlue,
-                      width: 4.0,
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints.expand(),
+                    child: FlatButton(
+                      onPressed: () {
+                        Get.to(MenuScreen());
+                      },
+                      padding: EdgeInsets.all(0.0),
+                      child: Image.asset('assets/init/grats.png'),
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                  ),
-                  height: 100,
-                  width: 430,
-                  child: RaisedButton.icon(
-                    textColor: Colors.black,
-                    color: Colors.white,
-                    onPressed: () {
-                      Get.to(Stars());// Respond to button press
-                    },
-                    icon: Icon(Icons.add, size: 0),
-                    label: Text("¿Qué objeto usó el gato \nFelix para cruzar el rio?",
-                    style: TextStyle(fontSize: 25)),
                   ),
                 ),
+              ),// el botton sig esta comentado porque debe ser dimamico
+              Positioned(
+                right: 250,
+                child: IconButton(
+                  // el boton debe dar a la siguiente pantalla
+                  icon: Icon(Icons.navigate_next),
+                  color: Colors.blue,
+                  iconSize: 80,
+                  onPressed: () {},
+                ),
               ),
-        ],
-      ))),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
