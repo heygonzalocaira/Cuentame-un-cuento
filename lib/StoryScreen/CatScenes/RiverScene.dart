@@ -3,11 +3,11 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/EndScene.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
 import 'package:get/get.dart';
-import 'dart:math';
 
 class RiverScene extends StatefulWidget {
   RiverScene({Key key, this.title}) : super(key: key);
@@ -18,16 +18,12 @@ class RiverScene extends StatefulWidget {
 }
 
 class _RiverSceneState extends State<RiverScene> {
-  final Map<String, bool> score = {};
-
   final Map choices = {
     ConstantsImages.img_ball: Colors.green,
     ConstantsImages.img_bottle: Colors.yellow,
     ConstantsImages.img_wood: Colors.red,
   };
 
-  Offset pos = Offset(50, 50);
-  Color warnaBg = Colors.grey;
   bool accepted = false;
 
   @override
@@ -88,10 +84,14 @@ class _RiverSceneState extends State<RiverScene> {
                           return Draggable<String>(
                             data: images,
                             child: FeedbackContainerImage(
-                              image: images,
+                              width: 100,
+                              height: 65,
+                              imagePath: images,
                             ), // user's wiew when they're not hace interactions
                             feedback: FeedbackContainerImage(
-                              image: images,
+                              width: 100,
+                              height: 65,
+                              imagePath: images,
                             ), // when the user start to drag
                             childWhenDragging:
                                 Container(), // when//display the original child when it's being dragged now
@@ -99,23 +99,19 @@ class _RiverSceneState extends State<RiverScene> {
                         }).toList()),
               ),
               Positioned(
-                bottom: 50,
-                left: 350,
+                bottom: 40,
+                left: 280,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return Container(
-                      width: 100,
-                      height: 70,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(90),
-                        color: warnaBg,
-                      ),
+                      width: 200,
+                      height: 100,
                     );
                   },
                   onAccept: (data) {
-                    if (data == 'assets/Objects/wood.png') {
+                    if (data == ConstantsImages.img_wood) {
                       setState(() {
-                        warnaBg = Colors.blue[700];
+                        Get.to(ForestDayScene());
                         accepted = true;
                       });
                     }
@@ -142,29 +138,6 @@ class _RiverSceneState extends State<RiverScene> {
   }
 }
 
-class FeedbackContainerImage extends StatelessWidget {
-  FeedbackContainerImage({Key key, this.image}) : super(key: key);
-
-  final String image;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: Container(
-        width: 100,
-        height: 65,
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(image),
-            fit: BoxFit.contain,
-          ),
-        ),
-      ),
-    );
-  }
-}
 // ejemplo para mover objetos
 //Positioned(
 //                top: 50,

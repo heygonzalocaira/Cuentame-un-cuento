@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
-//import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityNightScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
 class CityDayScene extends StatefulWidget {
@@ -16,6 +17,7 @@ class CityDayScene extends StatefulWidget {
 }
 
 class _CityDaySceneState extends State<CityDayScene> {
+  bool accepted = false;
   @override
   Widget build(BuildContext context) {
     double widthScreen;
@@ -39,14 +41,6 @@ class _CityDaySceneState extends State<CityDayScene> {
               ),
               TopButtons(),
               Positioned(
-                left: 100,
-                bottom: 5,
-                child: ContainerImage(
-                    width: 120,
-                    height: 120,
-                    imagePath: 'assets/Characters/felix_run1.png'),
-              ),
-              Positioned(
                 right: 100,
                 bottom: 5,
                 child: ContainerImage(
@@ -54,19 +48,57 @@ class _CityDaySceneState extends State<CityDayScene> {
                     height: 120,
                     imagePath: 'assets/Characters/sonder_run.png'),
               ),
-              BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
               Positioned(
-                right: 250,
-                child: IconButton(
-                  // el boton debe dar a la siguiente pantalla
-                  icon: Icon(Icons.navigate_next),
-                  color: Colors.blue,
-                  iconSize: 80,
-                  onPressed: () {
-                    Get.to(CityNightScene());
+                left: 30,
+                bottom: 5, //  90 120  'assets/Characters/sonder_run.png'
+                child: accepted
+                    ? Container()
+                    : DraggableImage(
+                        width: 120,
+                        height: 120,
+                        imagePath: 'assets/Characters/felix_run1.png',
+                      ),
+              ),
+              Positioned(
+                right: 10,
+                bottom: 5,
+                child: DragTarget(
+                  builder: (context, List<String> data, rj) {
+                    return Container(
+                      width: 100,
+                      height: 200,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color:
+                              Colors.red, //                   <--- border color
+                          width: 5.0,
+                        ),
+                      ),
+                    );
+                  },
+                  onAccept: (data) {
+                    if (data == 'assets/Characters/felix_run1.png') {
+                      setState(() {
+                        Get.to(CityNightScene());
+                        accepted = true;
+                      });
+                    }
                   },
                 ),
               ),
+              //BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
+              //Positioned(
+              //  right: 250,
+              //  child: IconButton(
+              //    // el boton debe dar a la siguiente pantalla
+              //    icon: Icon(Icons.navigate_next),
+              //    color: Colors.blue,
+              //    iconSize: 80,
+              //    onPressed: () {
+              //      Get.to(CityNightScene());
+              //    },
+              //  ),
+              //),
             ],
           ),
         ),
