@@ -27,9 +27,6 @@ class BottomButtons extends StatelessWidget {
           //  iconSize: 80,
           //  onPressed: () {},
           //),
-          SizedBox(
-            width: 250,
-          ),
         ],
       ),
     );
