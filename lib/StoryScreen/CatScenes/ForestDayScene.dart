@@ -70,13 +70,12 @@ class _ForestDaySceneState extends State<ForestDayScene> {
                   },
                 ),
               ),
-              Positioned(
-                right: 350,
-                bottom: 50,
+              Align(
+                alignment: Alignment.topCenter,
                 child: ContainerImage(
-                    width: 90,
-                    height: 120,
-                    imagePath: 'assets/Characters/sonder_run2.png'),
+                    width: 110,
+                    height: 140,
+                    imagePath: ConstantsImages.img_sonder),
               ),
             ],
           ),

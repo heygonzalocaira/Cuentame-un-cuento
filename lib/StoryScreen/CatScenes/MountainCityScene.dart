@@ -92,13 +92,12 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                   },
                 ),
               ),
-              Positioned(
-                right: 250,
-                bottom: 80,
+              Align(
+                alignment: Alignment.topCenter,
                 child: ContainerImage(
-                    width: 90,
-                    height: 120,
-                    imagePath: 'assets/Characters/sonder_run2.png'),
+                    width: 110,
+                    height: 140,
+                    imagePath: ConstantsImages.img_sonder),
               ),
             ],
           ),

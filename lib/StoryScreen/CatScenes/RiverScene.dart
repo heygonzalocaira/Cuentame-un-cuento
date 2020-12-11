@@ -52,13 +52,12 @@ class _RiverSceneState extends State<RiverScene> {
                     height: 120,
                     imagePath: 'assets/Characters/felix_run1.png'),
               ),
-              Positioned(
-                right: 100,
-                bottom: 70,
+              Align(
+                alignment: Alignment.topCenter,
                 child: ContainerImage(
-                    width: 90,
-                    height: 120,
-                    imagePath: 'assets/Characters/sonder_run2.png'),
+                    width: 110,
+                    height: 140,
+                    imagePath: ConstantsImages.img_sonder),
               ),
               Positioned(
                 left: 30,

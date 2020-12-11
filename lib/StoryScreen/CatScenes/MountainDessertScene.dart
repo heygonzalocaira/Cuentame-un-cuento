@@ -94,13 +94,12 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
                   },
                 ),
               ),
-              Positioned(
-                right: 350,
-                bottom: 100,
+              Align(
+                alignment: Alignment.topCenter,
                 child: ContainerImage(
-                    width: 90,
-                    height: 120,
-                    imagePath: 'assets/Characters/sonder_run2.png'),
+                    width: 110,
+                    height: 140,
+                    imagePath: ConstantsImages.img_sonder),
               ),
             ],
           ),
