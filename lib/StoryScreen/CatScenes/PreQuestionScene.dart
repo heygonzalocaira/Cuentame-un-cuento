@@ -41,9 +41,7 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                   child: ConstrainedBox(
                     constraints: BoxConstraints.expand(),
                     child: FlatButton(
-                      onPressed: () {
-                        
-                      },
+                      onPressed: () {},
                       padding: EdgeInsets.all(0.0),
                       child: Image.asset('assets/init/gatopregunta.png'),
                     ),
@@ -67,14 +65,13 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                     textColor: Colors.black,
                     color: Colors.white,
                     onPressed: () {
-                      Get.to(Ouestions());// Respond to button press
+                      Get.to(Ouestions()); // Respond to button press
                     },
                     icon: Icon(Icons.add, size: 0),
                     label: Text("ES HORA DE UN PEQUEÑO \nCUESTIONARIO"),
                   ),
                 ),
               ),
-
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
@@ -90,18 +87,6 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                       child: Image.asset('assets/init/gatopregunta.png'),
                     ),
                   ),
-                ),
-              ),
-
-              BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
-              Positioned(
-                right: 250,
-                child: IconButton(
-                  // el boton debe dar a la siguiente pantalla
-                  icon: Icon(Icons.navigate_next),
-                  color: Colors.blue,
-                  iconSize: 80,
-                  onPressed: () {},
                 ),
               ),
             ],

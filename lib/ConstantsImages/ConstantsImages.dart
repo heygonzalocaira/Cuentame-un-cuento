@@ -10,4 +10,6 @@ class ConstantsImages {
 
   static const String img_menu_ver = 'assets/init/ver.png';
   static const String img_menu_crear = 'assets/init/crear.png';
+
+  static const String img_star = 'assets/Objects/yellowstar.png';
 }

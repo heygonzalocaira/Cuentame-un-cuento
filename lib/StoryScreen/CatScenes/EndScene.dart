@@ -46,17 +46,6 @@ class _EndSceneState extends State<EndScene> {
                   ),
                 ),
               ),
-              BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
-              Positioned(
-                right: 250,
-                child: IconButton(
-                  // el boton debe dar a la siguiente pantalla
-                  icon: Icon(Icons.navigate_next),
-                  color: Colors.blue,
-                  iconSize: 80,
-                  onPressed: () {},
-                ),
-              ),
             ],
           ),
         ),

@@ -99,13 +99,13 @@ class _RiverSceneState extends State<RiverScene> {
                         }).toList()),
               ),
               Positioned(
-                bottom: 40,
+                bottom: 30,
                 left: 280,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return Container(
                       width: 200,
-                      height: 100,
+                      height: 120,
                     );
                   },
                   onAccept: (data) {

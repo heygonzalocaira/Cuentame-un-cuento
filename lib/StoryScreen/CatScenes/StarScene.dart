@@ -1,3 +1,5 @@
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/main.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
@@ -6,6 +8,7 @@ import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 
 class Stars extends StatefulWidget {
   Stars({Key key, this.title}) : super(key: key);
@@ -35,28 +38,59 @@ class _StarsState extends State<Stars> {
               TopButtons(),
               Center(
                 child: Container(
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints.expand(),
-                    child: FlatButton(
-                      onPressed: () {
-                        Get.to(MenuScreen());
-                      },
-                      padding: EdgeInsets.all(0.0),
-                      child: Image.asset('assets/init/grats.png'),
-                    ),
+                  width: 500,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 100,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(
+                            MenuScreen(),
+                          );
+                        },
+                        child: FeedbackContainerImage(
+                          width: 500,
+                          height: 100,
+                          imagePath: 'assets/init/grats.png',
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 110,
+                            ),
+                            ContainerImage(
+                              width: 80,
+                              height: 80,
+                              imagePath: ConstantsImages.img_star,
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            ContainerImage(
+                              width: 80,
+                              height: 80,
+                              imagePath: ConstantsImages.img_star,
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            ContainerImage(
+                              width: 80,
+                              height: 80,
+                              imagePath: ConstantsImages.img_star,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ),// el botton sig esta comentado porque debe ser dimamico
-              Positioned(
-                right: 250,
-                child: IconButton(
-                  // el boton debe dar a la siguiente pantalla
-                  icon: Icon(Icons.navigate_next),
-                  color: Colors.blue,
-                  iconSize: 80,
-                  onPressed: () {},
-                ),
-              ),
+              ), // el botton sig esta comentado porque debe ser dimamico
             ],
           ),
         ),
