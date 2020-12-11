@@ -52,15 +52,15 @@ class _RiverWoodSceneState extends State<RiverWoodScene> {
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return Container(
-                      width: 100,
+                      width: 150,
                       height: 200,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color:
-                              Colors.red, //                   <--- border color
-                          width: 5.0,
-                        ),
-                      ),
+                      //decoration: BoxDecoration(
+                      //  border: Border.all(
+                      //    color:
+                      //        Colors.red, //                   <--- border color
+                      //    width: 5.0,
+                      //  ),
+                      //),
                     );
                   },
                   onAccept: (data) {
@@ -75,7 +75,7 @@ class _RiverWoodSceneState extends State<RiverWoodScene> {
               ),
               Positioned(
                 right: 100,
-                bottom: 5,
+                bottom: 70,
                 child: ContainerImage(
                     width: 90,
                     height: 120,

@@ -54,13 +54,12 @@ class _RiverSceneState extends State<RiverScene> {
               ),
               Positioned(
                 right: 100,
-                bottom: 5,
+                bottom: 70,
                 child: ContainerImage(
                     width: 90,
                     height: 120,
                     imagePath: 'assets/Characters/sonder_run2.png'),
               ),
-              BottomButtons(),
               Positioned(
                 left: 30,
                 bottom: 170,
@@ -116,18 +115,6 @@ class _RiverSceneState extends State<RiverScene> {
                         accepted = true;
                       });
                     }
-                  },
-                ),
-              ),
-              Positioned(
-                right: 250,
-                child: IconButton(
-                  // el boton debe dar a la siguiente pantalla
-                  icon: Icon(Icons.navigate_next),
-                  color: Colors.blue,
-                  iconSize: 80,
-                  onPressed: () {
-                    //Get.to(EndScene());
                   },
                 ),
               ),

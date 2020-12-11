@@ -55,13 +55,6 @@ class _ForestDaySceneState extends State<ForestDayScene> {
                     return Container(
                       width: 100,
                       height: 200,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color:
-                              Colors.red, //                   <--- border color
-                          width: 5.0,
-                        ),
-                      ),
                     );
                   },
                   onAccept: (data) {
@@ -75,25 +68,12 @@ class _ForestDaySceneState extends State<ForestDayScene> {
                 ),
               ),
               Positioned(
-                right: 100,
-                bottom: 5,
+                right: 250,
+                bottom: 50,
                 child: ContainerImage(
                     width: 90,
                     height: 120,
                     imagePath: 'assets/Characters/sonder_run2.png'),
-              ),
-              BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
-              Positioned(
-                right: 250,
-                child: IconButton(
-                  // el boton debe dar a la siguiente pantalla
-                  icon: Icon(Icons.navigate_next),
-                  color: Colors.blue,
-                  iconSize: 80,
-                  onPressed: () {
-                    Get.to(RiverScene());
-                  },
-                ),
               ),
             ],
           ),

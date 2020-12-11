@@ -7,4 +7,7 @@ class ConstantsImages {
   static const String img_mountain = 'assets/Scenes/mountain.png';
   static const String img_mountaincity = 'assets/Scenes/mountaincity.png';
   static const String img_mountaindessert = 'assets/Scenes/mountaindessert.png';
+
+  static const String img_menu_ver = 'assets/init/ver.png';
+  static const String img_menu_crear = 'assets/init/crear.png';
 }
