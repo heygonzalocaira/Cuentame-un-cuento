@@ -1,3 +1,4 @@
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
@@ -40,7 +41,7 @@ class _CityDaySceneState extends State<CityDayScene> {
               ),
               TopButtons(),
               Positioned(
-                right: 100,
+                right: 150,
                 bottom: 5,
                 child: ContainerImage(
                     width: 90,
@@ -59,13 +60,14 @@ class _CityDaySceneState extends State<CityDayScene> {
                       ),
               ),
               Positioned(
-                right: 10,
+                right: 15,
                 bottom: 5,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return Container(
-                      width: 100,
+                    return ContainerImage(
+                      width: 120,
                       height: 200,
+                      imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {
@@ -78,19 +80,6 @@ class _CityDaySceneState extends State<CityDayScene> {
                   },
                 ),
               ),
-              //BottomButtons(), // el botton sig esta comentado porque debe ser dimamico
-              //Positioned(
-              //  right: 250,
-              //  child: IconButton(
-              //    // el boton debe dar a la siguiente pantalla
-              //    icon: Icon(Icons.navigate_next),
-              //    color: Colors.blue,
-              //    iconSize: 80,
-              //    onPressed: () {
-              //      Get.to(CityNightScene());
-              //    },
-              //  ),
-              //),
             ],
           ),
         ),

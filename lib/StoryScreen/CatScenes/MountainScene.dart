@@ -5,6 +5,7 @@ import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
 class MountainScene extends StatefulWidget {
@@ -53,13 +54,14 @@ class _MountainSceneState extends State<MountainScene> {
                       ),
               ),
               Positioned(
-                right: 90,
-                bottom: 50,
+                right: 140,
+                bottom: 40,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return Container(
-                      width: 200,
-                      height: 100,
+                    return FeedbackContainerImage(
+                      width: 130,
+                      height: 130,
+                      imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {

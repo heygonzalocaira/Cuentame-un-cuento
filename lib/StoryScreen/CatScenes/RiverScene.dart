@@ -103,9 +103,10 @@ class _RiverSceneState extends State<RiverScene> {
                 left: 280,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return Container(
-                      width: 200,
+                    return FeedbackContainerImage(
+                      width: 160,
                       height: 120,
+                      imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {

@@ -5,6 +5,7 @@ import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/MountainDessertScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
 class RiverWoodScene extends StatefulWidget {
@@ -47,20 +48,14 @@ class _RiverWoodSceneState extends State<RiverWoodScene> {
                       ),
               ),
               Positioned(
-                right: 10,
+                right: 0,
                 bottom: 5,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return Container(
-                      width: 150,
+                    return FeedbackContainerImage(
+                      width: 120,
                       height: 200,
-                      //decoration: BoxDecoration(
-                      //  border: Border.all(
-                      //    color:
-                      //        Colors.red, //                   <--- border color
-                      //    width: 5.0,
-                      //  ),
-                      //),
+                      imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {

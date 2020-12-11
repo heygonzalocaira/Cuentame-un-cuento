@@ -6,6 +6,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestNightScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:get/get.dart';
 
 class CityNightScene extends StatefulWidget {
@@ -57,9 +58,10 @@ class _CityNightSceneState extends State<CityNightScene> {
                 bottom: 5,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return Container(
-                      width: 100,
+                    return ContainerImage(
+                      width: 120,
                       height: 200,
+                      imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {
@@ -73,7 +75,7 @@ class _CityNightSceneState extends State<CityNightScene> {
                 ),
               ),
               Positioned(
-                right: 100,
+                right: 250,
                 bottom: 5,
                 child: ContainerImage(
                     width: 90,

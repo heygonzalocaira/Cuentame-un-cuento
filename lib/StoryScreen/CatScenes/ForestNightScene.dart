@@ -6,6 +6,8 @@ import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
 class ForestNightScene extends StatefulWidget {
@@ -48,13 +50,14 @@ class _ForestNightSceneState extends State<ForestNightScene> {
                       ),
               ),
               Positioned(
-                right: 10,
+                right: 2,
                 bottom: 5,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return Container(
-                      width: 100,
-                      height: 200,
+                    return FeedbackContainerImage(
+                      width: 150,
+                      height: 180,
+                      imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {
