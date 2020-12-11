@@ -5,6 +5,7 @@ import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
 import 'package:get/get.dart';
 
 class ForestNightScene extends StatefulWidget {
@@ -16,6 +17,8 @@ class ForestNightScene extends StatefulWidget {
 }
 
 class _ForestNightSceneState extends State<ForestNightScene> {
+  bool accepted = false;
+
   @override
   Widget build(BuildContext context) {
     double widthScreen;
@@ -34,12 +37,42 @@ class _ForestNightSceneState extends State<ForestNightScene> {
               ),
               TopButtons(),
               Positioned(
-                left: 100,
+                left: 30,
                 bottom: 5,
-                child: ContainerImage(
-                    width: 120,
-                    height: 120,
-                    imagePath: 'assets/Characters/felix_run1.png'),
+                child: accepted
+                    ? Container()
+                    : DraggableImage(
+                        width: 120,
+                        height: 120,
+                        imagePath: 'assets/Characters/felix_run1.png',
+                      ),
+              ),
+              Positioned(
+                right: 10,
+                bottom: 5,
+                child: DragTarget(
+                  builder: (context, List<String> data, rj) {
+                    return Container(
+                      width: 100,
+                      height: 200,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color:
+                              Colors.red, //                   <--- border color
+                          width: 5.0,
+                        ),
+                      ),
+                    );
+                  },
+                  onAccept: (data) {
+                    if (data == 'assets/Characters/felix_run1.png') {
+                      setState(() {
+                        Get.to(ForestDayScene());
+                        accepted = true;
+                      });
+                    }
+                  },
+                ),
               ),
               Positioned(
                 right: 100,

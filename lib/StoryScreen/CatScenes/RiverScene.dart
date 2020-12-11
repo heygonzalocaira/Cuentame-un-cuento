@@ -7,6 +7,7 @@ import 'package:arma_tu_cuento/StoryScreen/CatScenes/EndScene.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/RiverWoodScene.dart';
 import 'package:get/get.dart';
 
 class RiverScene extends StatefulWidget {
@@ -111,7 +112,7 @@ class _RiverSceneState extends State<RiverScene> {
                   onAccept: (data) {
                     if (data == ConstantsImages.img_wood) {
                       setState(() {
-                        Get.to(ForestDayScene());
+                        Get.to(RiverWoodScene());
                         accepted = true;
                       });
                     }
@@ -126,7 +127,7 @@ class _RiverSceneState extends State<RiverScene> {
                   color: Colors.blue,
                   iconSize: 80,
                   onPressed: () {
-                    Get.to(EndScene());
+                    //Get.to(EndScene());
                   },
                 ),
               ),

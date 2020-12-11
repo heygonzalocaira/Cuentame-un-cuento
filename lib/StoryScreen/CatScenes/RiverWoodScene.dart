@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
-//import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestNightScene.dart';
+import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/StoryScreen/CatScenes/MountainDessertScene.dart';
 import 'package:get/get.dart';
 
-class CityNightScene extends StatefulWidget {
-  CityNightScene({Key key, this.title}) : super(key: key);
+class RiverWoodScene extends StatefulWidget {
+  RiverWoodScene({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _CityNightSceneState createState() => _CityNightSceneState();
+  _RiverWoodSceneState createState() => _RiverWoodSceneState();
 }
 
-class _CityNightSceneState extends State<CityNightScene> {
+class _RiverWoodSceneState extends State<RiverWoodScene> {
   bool accepted = false;
 
   @override
@@ -33,17 +32,12 @@ class _CityNightSceneState extends State<CityNightScene> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: 'assets/Scenes/night.png',
-              ),
-              MainBackground(
-                widthScreen: widthScreen,
-                heightScreen: heightScreen,
-                imagePath: 'assets/Scenes/city.png',
+                imagePath: 'assets/Scenes/river.png',
               ),
               TopButtons(),
               Positioned(
                 left: 30,
-                bottom: 5,
+                bottom: 5, //  90 120  'assets/Characters/sonder_run.png'
                 child: accepted
                     ? Container()
                     : DraggableImage(
@@ -72,7 +66,7 @@ class _CityNightSceneState extends State<CityNightScene> {
                   onAccept: (data) {
                     if (data == 'assets/Characters/felix_run1.png') {
                       setState(() {
-                        Get.to(ForestNightScene());
+                        Get.to(MountainDessertScene());
                         accepted = true;
                       });
                     }
@@ -86,6 +80,15 @@ class _CityNightSceneState extends State<CityNightScene> {
                     width: 90,
                     height: 120,
                     imagePath: 'assets/Characters/sonder_run2.png'),
+              ),
+              Positioned(
+                bottom: 40,
+                left: 280,
+                child: ContainerImage(
+                  width: 160,
+                  height: 90,
+                  imagePath: ConstantsImages.img_wood,
+                ),
               ),
             ],
           ),
