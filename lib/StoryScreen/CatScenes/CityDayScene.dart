@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityNightScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
 class CityDayScene extends StatefulWidget {
@@ -18,6 +16,7 @@ class CityDayScene extends StatefulWidget {
 
 class _CityDaySceneState extends State<CityDayScene> {
   bool accepted = false;
+
   @override
   Widget build(BuildContext context) {
     double widthScreen;
