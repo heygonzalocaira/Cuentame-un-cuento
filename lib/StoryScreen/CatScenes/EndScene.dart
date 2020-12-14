@@ -1,3 +1,4 @@
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
@@ -5,6 +6,8 @@ import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/CatScenes/PreQuestionScene.dart';
 import 'package:get/get.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
+import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 
 class EndScene extends StatefulWidget {
   EndScene({Key key, this.title}) : super(key: key);
@@ -32,19 +35,25 @@ class _EndSceneState extends State<EndScene> {
                 imagePath: 'assets/init/background.png',
               ),
               TopButtons(),
-              Center(
-                child: Container(
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints.expand(),
-                    child: FlatButton(
-                      onPressed: () {
-                        Get.to(PreQuestionScenario());
-                      },
-                      padding: EdgeInsets.all(0.0),
-                      child: Image.asset('assets/init/finhistoria.png'),
-                    ),
+              Align(
+                alignment: Alignment.topCenter,
+                child: GestureDetector(
+                  onTap: () {
+                    Get.to(PreQuestionScenario());
+                  },
+                  child: FeedbackContainerImage(
+                    width: 350,
+                    height: 190,
+                    imagePath: ConstantsImages.img_endStory,
                   ),
                 ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: ContainerImage(
+                    width: 220,
+                    height: 200,
+                    imagePath: ConstantsImages.img_sonder),
               ),
             ],
           ),

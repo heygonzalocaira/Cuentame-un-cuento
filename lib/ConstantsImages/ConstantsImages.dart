@@ -7,6 +7,7 @@ class ConstantsImages {
   static const String img_mountain = 'assets/Scenes/mountain.png';
   static const String img_mountaincity = 'assets/Scenes/mountaincity.png';
   static const String img_mountaindessert = 'assets/Scenes/mountaindessert.png';
+  static const String img_endStory = 'assets/init/finhistoria.png';
   //static const String img_sonder = 'assets/Characters/sonder_run.png';
   static const String img_sonder = 'assets/Characters/sonder_talk.gif';
   //static const String img_sonder = 'assets/Characters/sonder_run.png';
@@ -21,4 +22,6 @@ class ConstantsImages {
   static const String gif_red_circle = 'assets/Objects/circlered.gif';
 
   static const String gif_sonder = 'assets/Characters/sonder_talk.gif';
+  static const String gif_moon = 'assets/Characters/moon.gif';
+  static const String gif_leafs = 'assets/Characters/leafs.gif';
 }

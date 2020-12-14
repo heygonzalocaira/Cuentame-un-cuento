@@ -59,9 +59,9 @@ class _CityNightSceneState extends State<CityNightScene> {
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return ContainerImage(
-                      width: 120,
-                      height: 200,
-                      imagePath: ConstantsImages.gif_red_circle,
+                      width: 150,
+                      height: 150,
+                      imagePath: ConstantsImages.gif_moon,
                     );
                   },
                   onAccept: (data) {

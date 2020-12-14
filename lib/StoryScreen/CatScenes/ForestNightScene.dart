@@ -57,7 +57,7 @@ class _ForestNightSceneState extends State<ForestNightScene> {
                     return FeedbackContainerImage(
                       width: 150,
                       height: 180,
-                      imagePath: ConstantsImages.gif_red_circle,
+                      imagePath: ConstantsImages.gif_leafs,
                     );
                   },
                   onAccept: (data) {
