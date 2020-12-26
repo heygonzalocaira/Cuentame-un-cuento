@@ -1,24 +1,28 @@
+import 'package:arma_tu_cuento/StoryScreen/Scenes/EndScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
-//import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/RiverScene.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
-class ForestDayScene extends StatefulWidget {
-  ForestDayScene({Key key, this.title}) : super(key: key);
+class MountainCityScene extends StatefulWidget {
+  MountainCityScene({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _ForestDaySceneState createState() => _ForestDaySceneState();
+  _MountainCitySceneState createState() => _MountainCitySceneState();
 }
 
-class _ForestDaySceneState extends State<ForestDayScene> {
+class _MountainCitySceneState extends State<MountainCityScene> {
+  final Map choices = {
+    ConstantsImages.img_ball: Colors.green,
+    ConstantsImages.img_bottle: Colors.yellow,
+    ConstantsImages.img_wood: Colors.red,
+  };
+
   bool accepted = false;
 
   @override
@@ -35,12 +39,12 @@ class _ForestDaySceneState extends State<ForestDayScene> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: 'assets/Scenes/dayforest.png',
+                imagePath: ConstantsImages.img_mountaincity,
               ),
               TopButtons(),
               Positioned(
                 left: 30,
-                bottom: 5,
+                bottom: 5, //  90 120  'assets/Characters/sonder_run.png'
                 child: accepted
                     ? Container()
                     : DraggableImage(
@@ -50,20 +54,38 @@ class _ForestDaySceneState extends State<ForestDayScene> {
                       ),
               ),
               Positioned(
-                right: 10,
-                bottom: 5,
+                left: 170,
+                bottom: 90,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return FeedbackContainerImage(
                       width: 150,
-                      height: 180,
+                      height: 150,
+                      imagePath: ConstantsImages.gif_blue_circle,
+                    );
+                  },
+                  onAccept: (data) {
+                    if (data == 'assets/Characters/felix_run1.png') {
+                      setState(() {});
+                    }
+                  },
+                ),
+              ),
+              Positioned(
+                right: 40,
+                bottom: 90,
+                child: DragTarget(
+                  builder: (context, List<String> data, rj) {
+                    return FeedbackContainerImage(
+                      width: 150,
+                      height: 150,
                       imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {
                     if (data == 'assets/Characters/felix_run1.png') {
                       setState(() {
-                        Get.to(RiverScene());
+                        Get.to(EndScene());
                         accepted = true;
                       });
                     }

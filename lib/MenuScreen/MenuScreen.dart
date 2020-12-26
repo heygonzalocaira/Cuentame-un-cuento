@@ -5,7 +5,7 @@ import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:get/get.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/CityDayScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Scenes/CityDayScene.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 
 class MenuScreen extends StatefulWidget {

@@ -1,28 +1,22 @@
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/MountainCityScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/StoryScreen/Scenes/MountainDessertScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
-class MountainScene extends StatefulWidget {
-  MountainScene({Key key, this.title}) : super(key: key);
+class RiverWoodScene extends StatefulWidget {
+  RiverWoodScene({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _MountainSceneState createState() => _MountainSceneState();
+  _RiverWoodSceneState createState() => _RiverWoodSceneState();
 }
 
-class _MountainSceneState extends State<MountainScene> {
-  final Map choices = {
-    ConstantsImages.img_ball: Colors.green,
-    ConstantsImages.img_bottle: Colors.yellow,
-    ConstantsImages.img_wood: Colors.red,
-  };
-
+class _RiverWoodSceneState extends State<RiverWoodScene> {
   bool accepted = false;
 
   @override
@@ -39,7 +33,7 @@ class _MountainSceneState extends State<MountainScene> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: ConstantsImages.img_mountain,
+                imagePath: 'assets/Scenes/river.png',
               ),
               TopButtons(),
               Positioned(
@@ -54,20 +48,20 @@ class _MountainSceneState extends State<MountainScene> {
                       ),
               ),
               Positioned(
-                right: 140,
-                bottom: 40,
+                right: 0,
+                bottom: 5,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return FeedbackContainerImage(
-                      width: 130,
-                      height: 130,
+                      width: 120,
+                      height: 200,
                       imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {
                     if (data == 'assets/Characters/felix_run1.png') {
                       setState(() {
-                        Get.to(MountainCityScene());
+                        Get.to(MountainDessertScene());
                         accepted = true;
                       });
                     }
@@ -80,6 +74,15 @@ class _MountainSceneState extends State<MountainScene> {
                     width: 110,
                     height: 140,
                     imagePath: ConstantsImages.img_sonder),
+              ),
+              Positioned(
+                bottom: 40,
+                left: 280,
+                child: ContainerImage(
+                  width: 160,
+                  height: 90,
+                  imagePath: ConstantsImages.img_wood,
+                ),
               ),
             ],
           ),

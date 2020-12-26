@@ -1,28 +1,23 @@
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/MountainScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
+//import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
+import 'package:arma_tu_cuento/Components/ContainerImage.dart';
+import 'package:arma_tu_cuento/StoryScreen/Scenes/ForestNightScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:get/get.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 
-class MountainDessertScene extends StatefulWidget {
-  MountainDessertScene({Key key, this.title}) : super(key: key);
+class CityNightScene extends StatefulWidget {
+  CityNightScene({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _MountainDessertSceneState createState() => _MountainDessertSceneState();
+  _CityNightSceneState createState() => _CityNightSceneState();
 }
 
-class _MountainDessertSceneState extends State<MountainDessertScene> {
-  final Map choices = {
-    ConstantsImages.img_ball: Colors.green,
-    ConstantsImages.img_bottle: Colors.yellow,
-    ConstantsImages.img_wood: Colors.red,
-  };
-
+class _CityNightSceneState extends State<CityNightScene> {
   bool accepted = false;
 
   @override
@@ -39,12 +34,17 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: ConstantsImages.img_mountaindessert,
+                imagePath: 'assets/Scenes/night.png',
+              ),
+              MainBackground(
+                widthScreen: widthScreen,
+                heightScreen: heightScreen,
+                imagePath: 'assets/Scenes/city.png',
               ),
               TopButtons(),
               Positioned(
                 left: 30,
-                bottom: 5, //  90 120  'assets/Characters/sonder_run.png'
+                bottom: 5,
                 child: accepted
                     ? Container()
                     : DraggableImage(
@@ -54,41 +54,21 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
                       ),
               ),
               Positioned(
-                left: 90,
-                top: 50,
+                right: 10,
+                bottom: 5,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return FeedbackContainerImage(
-                      width: 180,
-                      height: 180,
-                      imagePath: ConstantsImages.gif_red_circle,
+                    return ContainerImage(
+                      width: 150,
+                      height: 150,
+                      imagePath: ConstantsImages.gif_moon,
                     );
                   },
                   onAccept: (data) {
                     if (data == 'assets/Characters/felix_run1.png') {
                       setState(() {
-                        Get.to(MountainScene());
+                        Get.to(ForestNightScene());
                         accepted = true;
-                      });
-                    }
-                  },
-                ),
-              ),
-              Positioned(
-                right: 90,
-                top: 50,
-                child: DragTarget(
-                  builder: (context, List<String> data, rj) {
-                    return FeedbackContainerImage(
-                      width: 180,
-                      height: 180,
-                      imagePath: ConstantsImages.gif_blue_circle,
-                    );
-                  },
-                  onAccept: (data) {
-                    if (data == 'assets/Characters/felix_run1.png') {
-                      setState(() {
-                        print("Camino equivocado");
                       });
                     }
                   },

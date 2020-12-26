@@ -2,12 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/EndScene.dart';
 import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/RiverWoodScene.dart';
+
+import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverWoodScene.dart';
 import 'package:get/get.dart';
 
 class RiverScene extends StatefulWidget {

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/QuestionScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Scenes/QuestionScene.dart';
 import 'package:get/get.dart';
 
 class PreQuestionScenario extends StatefulWidget {
@@ -35,22 +31,9 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
               ),
               Align(
                 alignment: Alignment.bottomCenter,
+                //alignment: AlignmentDirectional(0.0, -0.5),
                 child: Container(
-                  height: 200,
-                  width: 200,
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints.expand(),
-                    child: FlatButton(
-                      onPressed: () {},
-                      padding: EdgeInsets.all(0.0),
-                      child: Image.asset('assets/init/gatopregunta.png'),
-                    ),
-                  ),
-                ),
-              ),
-              Align(
-                alignment: AlignmentDirectional(0.0, -0.5),
-                child: Container(
+                  margin: const EdgeInsets.only(bottom: 20.0),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
@@ -59,8 +42,8 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
                   ),
-                  height: 60,
-                  width: 230,
+                  height: 80,
+                  width: 320,
                   child: RaisedButton.icon(
                     textColor: Colors.black,
                     color: Colors.white,
@@ -68,15 +51,18 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                       Get.to(Ouestions()); // Respond to button press
                     },
                     icon: Icon(Icons.add, size: 0),
-                    label: Text("ES HORA DE UN PEQUEÑO \nCUESTIONARIO"),
+                    label: Text(
+                      "ES HORA DE UN PEQUEÑO \nCUESTIONARIO",
+                      style: TextStyle(fontSize: 20),
+                    ),
                   ),
                 ),
               ),
               Align(
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.topCenter,
                 child: Container(
-                  height: 200,
-                  width: 200,
+                  height: 250,
+                  width: 250,
                   child: ConstrainedBox(
                     constraints: BoxConstraints.expand(),
                     child: FlatButton(

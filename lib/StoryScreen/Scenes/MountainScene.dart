@@ -1,4 +1,4 @@
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/EndScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Scenes/MountainCityScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
@@ -8,15 +8,15 @@ import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
-class MountainCityScene extends StatefulWidget {
-  MountainCityScene({Key key, this.title}) : super(key: key);
+class MountainScene extends StatefulWidget {
+  MountainScene({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _MountainCitySceneState createState() => _MountainCitySceneState();
+  _MountainSceneState createState() => _MountainSceneState();
 }
 
-class _MountainCitySceneState extends State<MountainCityScene> {
+class _MountainSceneState extends State<MountainScene> {
   final Map choices = {
     ConstantsImages.img_ball: Colors.green,
     ConstantsImages.img_bottle: Colors.yellow,
@@ -39,7 +39,7 @@ class _MountainCitySceneState extends State<MountainCityScene> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: ConstantsImages.img_mountaincity,
+                imagePath: ConstantsImages.img_mountain,
               ),
               TopButtons(),
               Positioned(
@@ -54,38 +54,20 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                       ),
               ),
               Positioned(
-                left: 170,
-                bottom: 90,
+                right: 140,
+                bottom: 40,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return FeedbackContainerImage(
-                      width: 150,
-                      height: 150,
-                      imagePath: ConstantsImages.gif_blue_circle,
-                    );
-                  },
-                  onAccept: (data) {
-                    if (data == 'assets/Characters/felix_run1.png') {
-                      setState(() {});
-                    }
-                  },
-                ),
-              ),
-              Positioned(
-                right: 40,
-                bottom: 90,
-                child: DragTarget(
-                  builder: (context, List<String> data, rj) {
-                    return FeedbackContainerImage(
-                      width: 150,
-                      height: 150,
+                      width: 130,
+                      height: 130,
                       imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {
                     if (data == 'assets/Characters/felix_run1.png') {
                       setState(() {
-                        Get.to(EndScene());
+                        Get.to(MountainCityScene());
                         accepted = true;
                       });
                     }

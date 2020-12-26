@@ -4,7 +4,7 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/PreQuestionScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Scenes/PreQuestionScene.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
@@ -36,7 +36,7 @@ class _EndSceneState extends State<EndScene> {
               ),
               TopButtons(),
               Align(
-                alignment: Alignment.topCenter,
+                alignment: Alignment.bottomCenter,
                 child: GestureDetector(
                   onTap: () {
                     Get.to(PreQuestionScenario());
@@ -49,7 +49,7 @@ class _EndSceneState extends State<EndScene> {
                 ),
               ),
               Align(
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.topCenter,
                 child: ContainerImage(
                     width: 220,
                     height: 200,

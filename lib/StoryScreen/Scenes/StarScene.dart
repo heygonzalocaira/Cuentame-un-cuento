@@ -47,7 +47,7 @@ class _StarsState extends State<Stars> {
                       GestureDetector(
                         onTap: () {
                           Get.to(
-                            MenuScreen(),
+                            MainScreen(),
                           );
                         },
                         child: FeedbackContainerImage(

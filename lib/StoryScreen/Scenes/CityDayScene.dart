@@ -1,24 +1,21 @@
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
-//import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
-import 'package:arma_tu_cuento/StoryScreen/CatScenes/ForestDayScene.dart';
+import 'package:arma_tu_cuento/StoryScreen/Scenes/CityNightScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
-import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:get/get.dart';
 
-class ForestNightScene extends StatefulWidget {
-  ForestNightScene({Key key, this.title}) : super(key: key);
+class CityDayScene extends StatefulWidget {
+  CityDayScene({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _ForestNightSceneState createState() => _ForestNightSceneState();
+  _CityDaySceneState createState() => _CityDaySceneState();
 }
 
-class _ForestNightSceneState extends State<ForestNightScene> {
+class _CityDaySceneState extends State<CityDayScene> {
   bool accepted = false;
 
   @override
@@ -35,12 +32,24 @@ class _ForestNightSceneState extends State<ForestNightScene> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: 'assets/Scenes/nightforest.png',
+                imagePath: 'assets/Scenes/day.png',
+              ),
+              MainBackground(
+                widthScreen: widthScreen,
+                heightScreen: heightScreen,
+                imagePath: 'assets/Scenes/city.png',
               ),
               TopButtons(),
+              Align(
+                alignment: Alignment.topCenter,
+                child: ContainerImage(
+                    width: 110,
+                    height: 140,
+                    imagePath: ConstantsImages.img_sonder),
+              ),
               Positioned(
                 left: 30,
-                bottom: 5,
+                bottom: 5, //  90 120  'assets/Characters/sonder_run.png'
                 child: accepted
                     ? Container()
                     : DraggableImage(
@@ -50,32 +59,25 @@ class _ForestNightSceneState extends State<ForestNightScene> {
                       ),
               ),
               Positioned(
-                right: 2,
+                right: 15,
                 bottom: 5,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
-                    return FeedbackContainerImage(
-                      width: 150,
-                      height: 180,
-                      imagePath: ConstantsImages.gif_leafs,
+                    return ContainerImage(
+                      width: 120,
+                      height: 200,
+                      imagePath: ConstantsImages.gif_red_circle,
                     );
                   },
                   onAccept: (data) {
                     if (data == 'assets/Characters/felix_run1.png') {
                       setState(() {
-                        Get.to(ForestDayScene());
+                        Get.to(CityNightScene());
                         accepted = true;
                       });
                     }
                   },
                 ),
-              ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: ContainerImage(
-                    width: 110,
-                    height: 140,
-                    imagePath: ConstantsImages.img_sonder),
               ),
             ],
           ),
