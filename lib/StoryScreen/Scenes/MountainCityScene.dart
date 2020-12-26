@@ -50,7 +50,7 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: 'assets/Characters/felix_run1.png',
+                        imagePath: character.img_character,
                       ),
               ),
               Positioned(
@@ -65,7 +65,7 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == 'assets/Characters/felix_run1.png') {
+                    if (data == character.img_character) {
                       setState(() {});
                     }
                   },
@@ -83,7 +83,7 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == 'assets/Characters/felix_run1.png') {
+                    if (data == character.img_character) {
                       setState(() {
                         Get.to(EndScene());
                         accepted = true;

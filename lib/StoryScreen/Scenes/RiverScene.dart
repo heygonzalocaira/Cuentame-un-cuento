@@ -48,7 +48,7 @@ class _RiverSceneState extends State<RiverScene> {
                 child: ContainerImage(
                     width: 120,
                     height: 120,
-                    imagePath: 'assets/Characters/felix_run1.png'),
+                    imagePath: character.img_character),
               ),
               Align(
                 alignment: Alignment.topCenter,

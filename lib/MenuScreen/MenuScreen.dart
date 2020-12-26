@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
+import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
+import 'package:arma_tu_cuento/MenuScreen/SelectCharacterScreen.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:arma_tu_cuento/StoryScreen/Scenes/CityDayScene.dart';
-import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
 
 class MenuScreen extends StatefulWidget {
   MenuScreen({Key key, this.title}) : super(key: key);
@@ -49,7 +49,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(CityDayScene());
+                        Get.to(SelectCharacterScreen());
                       },
                       child: OptionButton(
                         words: "Crear",

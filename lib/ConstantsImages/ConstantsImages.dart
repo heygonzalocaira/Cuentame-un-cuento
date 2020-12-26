@@ -24,4 +24,11 @@ class ConstantsImages {
   static const String gif_sonder = 'assets/Characters/sonder_talk.gif';
   static const String gif_moon = 'assets/Characters/moon.gif';
   static const String gif_leafs = 'assets/Characters/leafs.gif';
+  String img_character = '';
+
+  void set_image_character(String text) {
+    this.img_character = text;
+  }
 }
+
+ConstantsImages character = ConstantsImages();

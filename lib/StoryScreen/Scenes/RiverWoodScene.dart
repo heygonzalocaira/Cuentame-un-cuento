@@ -44,7 +44,7 @@ class _RiverWoodSceneState extends State<RiverWoodScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: 'assets/Characters/felix_run1.png',
+                        imagePath: character.img_character,
                       ),
               ),
               Positioned(
@@ -59,7 +59,7 @@ class _RiverWoodSceneState extends State<RiverWoodScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == 'assets/Characters/felix_run1.png') {
+                    if (data == character.img_character) {
                       setState(() {
                         Get.to(MountainDessertScene());
                         accepted = true;

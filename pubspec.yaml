@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   get: ^3.21.3
   flutter_volume_slider: ^1.0.6
+  carousel_slider: ^2.3.1
 
   
 

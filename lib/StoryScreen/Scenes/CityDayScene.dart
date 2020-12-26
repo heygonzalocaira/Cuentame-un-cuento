@@ -55,7 +55,7 @@ class _CityDaySceneState extends State<CityDayScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: 'assets/Characters/felix_run1.png',
+                        imagePath: character.img_character,
                       ),
               ),
               Positioned(
@@ -70,7 +70,7 @@ class _CityDaySceneState extends State<CityDayScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == 'assets/Characters/felix_run1.png') {
+                    if (data == character.img_character) {
                       setState(() {
                         Get.to(CityNightScene());
                         accepted = true;
