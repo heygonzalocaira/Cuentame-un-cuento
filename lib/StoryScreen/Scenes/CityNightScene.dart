@@ -6,7 +6,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/ForestNightScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
-import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
 import 'package:get/get.dart';
 
 class CityNightScene extends StatefulWidget {

@@ -1,4 +1,5 @@
-import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
+import 'package:arma_tu_cuento/Constants/ConstantsAudios.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';

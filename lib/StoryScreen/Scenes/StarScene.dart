@@ -1,4 +1,4 @@
-import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
 import 'package:arma_tu_cuento/main.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';

@@ -5,6 +5,9 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
 import 'package:get/get.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 void main() => runApp(GetMaterialApp(home: MyApp()));
 
@@ -25,15 +28,24 @@ class MyApp extends StatelessWidget {
 class MainScreen extends StatefulWidget {
   MainScreen({Key key, this.title}) : super(key: key);
   final String title;
-
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
+  AudioCache _audioCache;
+
+  final assetsAudioPlayer = AssetsAudioPlayer();
+
   @override
   void initState() {
     super.initState();
+    assetsAudioPlayer.open(
+      Audio("assets/music/song_background.mp3"),
+    );
+    //_audioCache = AudioCache(
+    //    prefix: "assets/music/",
+    //    fixedPlayer: AudioPlayer()..setReleaseMode(ReleaseMode.STOP));
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
       DeviceOrientation.landscapeLeft,
@@ -57,6 +69,8 @@ class _MainScreenState extends State<MainScreen> {
     double heightScreen;
     widthScreen = MediaQuery.of(context).size.width;
     heightScreen = MediaQuery.of(context).size.height;
+    assetsAudioPlayer.play();
+    //_audioCache.loop('song_background.mp3');
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -118,6 +132,8 @@ class _MainScreenState extends State<MainScreen> {
                           color: Colors.blue,
                         )),
                     onTap: () {
+                      //assetsAudioPlayer.stop();
+                      //_audioCache.fixedPlayer.stop();
                       Get.to(MenuScreen());
                     },
                   ),

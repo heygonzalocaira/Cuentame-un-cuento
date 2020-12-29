@@ -6,7 +6,7 @@ import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/CityDayScene.dart';
-import 'package:arma_tu_cuento/ConstantsImages/ConstantsImages.dart';
+import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
