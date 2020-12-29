@@ -69,7 +69,7 @@ class _MainScreenState extends State<MainScreen> {
     double heightScreen;
     widthScreen = MediaQuery.of(context).size.width;
     heightScreen = MediaQuery.of(context).size.height;
-    assetsAudioPlayer.play();
+    //assetsAudioPlayer.play();
     //_audioCache.loop('song_background.mp3');
     return Scaffold(
       body: SafeArea(
