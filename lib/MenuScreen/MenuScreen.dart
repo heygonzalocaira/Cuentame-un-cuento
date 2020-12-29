@@ -34,15 +34,16 @@ class _MenuScreenState extends State<MenuScreen> {
                 imagePath: 'assets/init/background.png',
               ),
               TopButtons(),
-              Positioned(
-                left: 150,
-                bottom: 40,
+              Center(
                 child: Column(
                   children: [
+                    SizedBox(
+                      height: heightScreen * 0.15,
+                    ),
                     ContainerImage(
-                      width: 130,
-                      height: 120,
-                      imagePath: ConstantsImages.img_menu_crear,
+                      width: 160,
+                      height: 160,
+                      imagePath: ConstantsImages.img_menu_ver,
                     ),
                     SizedBox(
                       height: 10,
@@ -52,38 +53,38 @@ class _MenuScreenState extends State<MenuScreen> {
                         Get.to(SelectCharacterScreen());
                       },
                       child: OptionButton(
-                        words: "Crear",
+                        words: "Empecemos",
                         size_words: 23.0,
                       ),
                     ),
                   ],
                 ),
               ),
-              Positioned(
-                right: 150,
-                bottom: 40,
-                child: Column(
-                  children: [
-                    ContainerImage(
-                      width: 130,
-                      height: 120,
-                      imagePath: ConstantsImages.img_menu_ver,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        //Get.to(); //Poner el widget necesario
-                      },
-                      child: OptionButton(
-                        words: "Ver",
-                        size_words: 23.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              //Positioned(
+              //  right: 150,
+              //  bottom: 40,
+              //  child: Column(
+              //    children: [
+              //      ContainerImage(
+              //        width: 130,
+              //        height: 120,
+              //        imagePath: ConstantsImages.img_menu_ver,
+              //      ),
+              //      SizedBox(
+              //        height: 10,
+              //      ),
+              //      GestureDetector(
+              //        onTap: () {
+              //          //Get.to(); //Poner el widget necesario
+              //        },
+              //        child: OptionButton(
+              //          words: "Ver",
+              //          size_words: 23.0,
+              //        ),
+              //      ),
+              //    ],
+              //  ),
+              //),
             ],
           ),
         ),
