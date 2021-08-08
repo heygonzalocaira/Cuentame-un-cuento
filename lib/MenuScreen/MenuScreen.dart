@@ -31,7 +31,7 @@ class _MenuScreenState extends State<MenuScreen> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: 'assets/init/background.png',
+                imagePath: 'assets/Scenes/bosque.gif',
               ),
               TopButtons(),
               Center(

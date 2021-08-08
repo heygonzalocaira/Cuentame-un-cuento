@@ -33,13 +33,13 @@ final List<Widget> imageSliders = imgList
                           case 0:
                             {
                               character.set_image_character(
-                                  "assets/Characters/perro.png");
+                                  "assets/Characters/dog.gif");
                             }
                             break;
                           case 1:
                             {
                               character.set_image_character(
-                                  "assets/Characters/gato.png");
+                                  "assets/Characters/cat.gif");
                             }
                             break;
                           case 2:
@@ -51,7 +51,7 @@ final List<Widget> imageSliders = imgList
                           case 3:
                             {
                               character.set_image_character(
-                                  "assets/Characters/conejo.png");
+                                  "assets/Characters/rabiit.gif");
                             }
                             break;
                         }

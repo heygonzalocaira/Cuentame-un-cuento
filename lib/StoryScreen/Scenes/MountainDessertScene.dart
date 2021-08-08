@@ -1,3 +1,4 @@
+import 'package:arma_tu_cuento/StoryScreen/Scenes/MountainDessertFailScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/MountainScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
@@ -86,10 +87,8 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == 'assets/Characters/felix_run1.png') {
-                      setState(() {
-                        print("Camino equivocado");
-                      });
+                    if (data == character.img_character) {
+                      Get.to(MountainDessertFailScene());
                     }
                   },
                 ),

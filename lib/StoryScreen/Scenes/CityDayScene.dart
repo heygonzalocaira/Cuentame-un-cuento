@@ -67,7 +67,7 @@ class _CityDaySceneState extends State<CityDayScene> {
                     return ContainerImage(
                       width: 120,
                       height: 200,
-                      imagePath: ConstantsImages.gif_red_circle,
+                      imagePath: "assets/Objects/circle.gif",
                     );
                   },
                   onAccept: (data) {

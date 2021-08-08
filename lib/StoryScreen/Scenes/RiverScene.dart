@@ -1,3 +1,4 @@
+import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverFailScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
@@ -39,61 +40,72 @@ class _RiverSceneState extends State<RiverScene> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: 'assets/Scenes/river.png',
+                imagePath: 'assets/Scenes/river.gif',
               ),
               TopButtons(),
               Positioned(
                 left: 100,
                 bottom: 5,
-                child: ContainerImage(
-                    width: 120,
-                    height: 120,
-                    imagePath: character.img_character),
-              ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: ContainerImage(
-                    width: 110,
-                    height: 140,
-                    imagePath: ConstantsImages.img_sonder),
-              ),
-              Positioned(
-                left: 30,
-                bottom: 170,
                 child: Container(
-                  width: 300,
+                  width: 120,
                   height: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(90),
-                    color: Colors.white,
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                      image: ExactAssetImage(character.img_character),
+                      fit: BoxFit.fitWidth,
+                    ),
                   ),
                 ),
               ),
-              Positioned(
-                left: 25,
-                bottom: 190,
-                child: accepted
-                    ? Container()
-                    : Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: choices.keys.map((images) {
-                          return Draggable<String>(
-                            data: images,
-                            child: FeedbackContainerImage(
-                              width: 100,
-                              height: 65,
-                              imagePath: images,
-                            ), // user's wiew when they're not hace interactions
-                            feedback: FeedbackContainerImage(
-                              width: 100,
-                              height: 65,
-                              imagePath: images,
-                            ), // when the user start to drag
-                            childWhenDragging:
-                                Container(), // when//display the original child when it's being dragged now
-                          );
-                        }).toList()),
+              Align(
+                alignment: Alignment.topCenter,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          width: 300,
+                          height: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(90),
+                            color: Colors.white,
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 30,
+                          child: accepted
+                              ? Container()
+                              : Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: choices.keys.map((images) {
+                                    return Draggable<String>(
+                                      data: images,
+                                      child: FeedbackContainerImage(
+                                        width: 100,
+                                        height: 65,
+                                        imagePath: images,
+                                      ), // user's wiew when they're not hace interactions
+                                      feedback: FeedbackContainerImage(
+                                        width: 100,
+                                        height: 65,
+                                        imagePath: images,
+                                      ), // when the user start to drag
+                                      childWhenDragging:
+                                          Container(), // when//display the original child when it's being dragged now
+                                    );
+                                  }).toList()),
+                        ),
+                      ],
+                    ),
+                    ContainerImage(
+                        width: 110,
+                        height: 140,
+                        imagePath: ConstantsImages.img_sonder),
+                  ],
+                ),
               ),
               Positioned(
                 bottom: 30,
@@ -112,7 +124,10 @@ class _RiverSceneState extends State<RiverScene> {
                         Get.to(RiverWoodScene());
                         accepted = true;
                       });
+                    } else {
+                      Get.to(RiverFailScene());
                     }
+                    ;
                   },
                 ),
               ),

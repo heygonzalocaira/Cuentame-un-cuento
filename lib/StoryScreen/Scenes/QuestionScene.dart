@@ -26,76 +26,84 @@ class _OuestionsState extends State<Ouestions> {
     heightScreen = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
-          child: Center(
-              child: Stack(
-        children: <Widget>[
-          MainBackground(
-            widthScreen: widthScreen,
-            heightScreen: heightScreen,
-            imagePath: 'assets/init/background.png',
-          ),
-          TopButtons(),
-          Align(
-            alignment: AlignmentDirectional(0.0, -0.9),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                  color: Colors.lightBlue,
-                  width: 4.0,
+        child: Center(
+          child: Stack(
+            children: <Widget>[
+              MainBackground(
+                widthScreen: widthScreen,
+                heightScreen: heightScreen,
+                imagePath: 'assets/init/background.png',
+              ),
+              TopButtons(),
+              Align(
+                alignment: AlignmentDirectional(0.0, -0.9),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.lightBlue,
+                      width: 4.0,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                  ),
+                  height: 100,
+                  width: 430,
+                  child: RaisedButton.icon(
+                    textColor: Colors.black,
+                    color: Colors.white,
+                    onPressed: () {
+                      Get.to(
+                        Ouestions(),
+                      ); // Respond to button press
+                    },
+                    icon: Icon(Icons.add, size: 0),
+                    label: Text(
+                        "¿Qué objeto usó el gato \nFelix para cruzar el rio?",
+                        style: TextStyle(fontSize: 25)),
+                  ),
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
               ),
-              height: 100,
-              width: 430,
-              child: RaisedButton.icon(
-                textColor: Colors.black,
-                color: Colors.white,
-                onPressed: () {
-                  Get.to(Ouestions()); // Respond to button press
-                },
-                icon: Icon(Icons.add, size: 0),
-                label: Text(
-                    "¿Qué objeto usó el gato \nFelix para cruzar el rio?",
-                    style: TextStyle(fontSize: 25)),
+              Positioned(
+                left: 50,
+                bottom: 10,
+                child: GestureDetector(
+                  onTap: () {
+                    flag = true;
+                    Get.to(
+                      Stars(),
+                    );
+                  },
+                  child: AlternativeImage(
+                    imagePATH: ConstantsImages.img_wood,
+                    text: "a)",
+                  ),
+                ),
               ),
-            ),
+              Positioned(
+                left: 260,
+                bottom: 10,
+                child: GestureDetector(
+                    onTap: () {},
+                    child: AlternativeImage(
+                      imagePATH: ConstantsImages.img_ball,
+                      text: "b)",
+                    )),
+              ),
+              Positioned(
+                left: 470,
+                bottom: 10,
+                child: GestureDetector(
+                  onTap: () {},
+                  child: AlternativeImage(
+                    imagePATH: ConstantsImages.img_bottle,
+                    text: "c)",
+                  ),
+                ),
+              ),
+            ],
           ),
-          Positioned(
-            left: 50,
-            bottom: 10,
-            child: GestureDetector(
-                onTap: () {
-                  flag = true;
-                  Get.to(Stars());
-                },
-                child: AlternativeImage(
-                  imagePATH: ConstantsImages.img_wood,
-                  text: "a)",
-                )),
-          ),
-          Positioned(
-            left: 260,
-            bottom: 10,
-            child: GestureDetector(
-                onTap: () {},
-                child: AlternativeImage(
-                  imagePATH: ConstantsImages.img_ball,
-                  text: "b)",
-                )),
-          ),
-          Positioned(
-            left: 470,
-            bottom: 10,
-            child: GestureDetector(
-                onTap: () {},
-                child: AlternativeImage(
-                  imagePATH: ConstantsImages.img_bottle,
-                  text: "c)",
-                )),
-          ),
-        ],
-      ))),
+        ),
+      ),
     );
   }
 }

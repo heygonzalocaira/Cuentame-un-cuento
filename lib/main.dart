@@ -79,7 +79,7 @@ class _MainScreenState extends State<MainScreen> {
               MainBackground(
                 widthScreen: widthScreen,
                 heightScreen: heightScreen,
-                imagePath: 'assets/init/background.png',
+                imagePath: 'assets/Scenes/bosque.gif',
               ),
               Align(
                 alignment: Alignment.topCenter,
