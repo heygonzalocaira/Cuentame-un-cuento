@@ -8,6 +8,7 @@ import 'package:arma_tu_cuento/StoryScreen/Scenes/PreQuestionScene.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
+import 'package:particles_flutter/particles_flutter.dart';
 
 class EndScene extends StatefulWidget {
   EndScene({Key key, this.title}) : super(key: key);
@@ -34,6 +35,31 @@ class _EndSceneState extends State<EndScene> {
                 heightScreen: heightScreen,
                 imagePath: 'assets/init/background.png',
               ),
+              CircularParticle(
+                // key: UniqueKey(),
+                awayRadius: 80,
+                numberOfParticles: 200,
+                speedOfParticles: 1,
+                height: heightScreen,
+                width: widthScreen,
+                onTapAnimation: true,
+                particleColor: Colors.white.withAlpha(150),
+                awayAnimationDuration: Duration(milliseconds: 600),
+                maxParticleSize: 8,
+                isRandSize: true,
+                isRandomColor: true,
+                randColorList: [
+                  Colors.red.withAlpha(210),
+                  Colors.white.withAlpha(210),
+                  Colors.yellow.withAlpha(210),
+                  Colors.green.withAlpha(210)
+                ],
+                awayAnimationCurve: Curves.easeInOutBack,
+                enableHover: true,
+                hoverColor: Colors.white,
+                hoverRadius: 90,
+                connectDots: false, //not recommended
+              ),
               TopButtons(),
               Align(
                 alignment: Alignment.bottomCenter,
@@ -42,8 +68,8 @@ class _EndSceneState extends State<EndScene> {
                     Get.to(PreQuestionScenario());
                   },
                   child: FeedbackContainerImage(
-                    width: 350,
-                    height: 190,
+                    width: 300,
+                    height: 170,
                     imagePath: ConstantsImages.img_endStory,
                   ),
                 ),
