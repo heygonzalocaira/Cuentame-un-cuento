@@ -3,7 +3,7 @@
 Descripción
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
-![Lines of code](https://img.shields.io/tokei/lines/github/heymadscientist/Arma-tu-cuento)
+![Lines of code](https://img.shields.io/tokei/lines/github/heymadscientist/Cuentame-un-cuento)
 
 <div align="center">
 <img src="assets/init/main.png" width="600" alt="accessibility text">
