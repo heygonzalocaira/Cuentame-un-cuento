@@ -48,7 +48,7 @@ class _RiverSceneState extends State<RiverScene> {
                 bottom: 5,
                 child: Container(
                   width: 120,
-                  height: 120,
+                  height: 180,
                   decoration: new BoxDecoration(
                     image: new DecorationImage(
                       image: ExactAssetImage(character.img_character),

@@ -5,7 +5,7 @@ import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
-
+import 'dart:math' as math;
 import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverWoodScene.dart';
 import 'package:get/get.dart';
 
@@ -57,6 +57,19 @@ class _RiverFailSceneState extends State<RiverFailScene> {
                         Get.to(RiverScene());
                       },
                       child: Text("Escoge otra opción"),
+                    ),
+                    Transform.rotate(
+                      angle: -math.pi / 4,
+                      child: Container(
+                        width: 120,
+                        height: 120,
+                        decoration: new BoxDecoration(
+                          image: new DecorationImage(
+                            image: ExactAssetImage(character.img_character),
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),

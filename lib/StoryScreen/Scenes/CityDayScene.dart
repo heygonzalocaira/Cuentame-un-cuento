@@ -60,18 +60,29 @@ class _CityDaySceneState extends State<CityDayScene> {
                       ),
               ),
               Positioned(
-                right: 15,
-                bottom: 5,
+                right: 30,
+                bottom: 5, //  90 120  'assets/Characters/sonder_run.png'
+                child: accepted
+                    ? Container()
+                    : DraggableImage(
+                        width: 120,
+                        height: 120,
+                        imagePath: "assets/Objects/moon.png",
+                      ),
+              ),
+              Positioned(
+                right: 150,
+                top: 0,
                 child: DragTarget(
                   builder: (context, List<String> data, rj) {
                     return ContainerImage(
-                      width: 120,
-                      height: 200,
+                      width: 130,
+                      height: 150,
                       imagePath: "assets/Objects/circle.gif",
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == "assets/Objects/moon.png") {
                       setState(() {
                         Get.to(CityNightScene());
                         accepted = true;

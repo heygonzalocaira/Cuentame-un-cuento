@@ -18,8 +18,8 @@ class ConstantsImages {
 
   static const String img_star = 'assets/Objects/yellowstar.png';
 
-  static const String gif_blue_circle = 'assets/Objects/circleblue.gif';
-  static const String gif_red_circle = 'assets/Objects/circlered.gif';
+  static const String gif_blue_circle = 'assets/Objects/circle.gif';
+  static const String gif_red_circle = 'assets/Objects/circle.gif';
 
   static const String gif_sonder = 'assets/Characters/sonder_talk.gif';
   static const String gif_moon = 'assets/Characters/moon.gif';
