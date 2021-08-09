@@ -3,7 +3,7 @@
 Descripción
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
-![Lines of code](https://img.shields.io/tokei/lines/github/madscientistCS/Arma-tu-cuento)
+![Lines of code](https://img.shields.io/tokei/lines/github/heymadscientist/Arma-tu-cuento)
 
 <div align="center">
 <img src="assets/init/main.png" width="600" alt="accessibility text">
@@ -16,9 +16,9 @@ Descripción
 |     |     |    |
 | :-: | :-: |:-: |
 |  Scenes | Select objects | Select characters |
-| <img src="assets/Readme/scenes.gif" width="300" > | <img src="assets/Readme/ways.gif" width="300" >  | <img src="assets/Readme/select.gif" width="300" > |
+| <img src="assets/readme/scenes.gif" width="300" > | <img src="assets/readme/ways.gif" width="300" >  | <img src="assets/readme/select.gif" width="300" > |
 |  Menu | Question Scene | End Scene |
-| <img src="assets/Readme/menu.gif" width="300" > | <img src="assets/Readme/question.gif" width="300" >  | <img src="assets/Readme/end.gif" width="300" > |
+| <img src="assets/readme/menu.gif" width="300" > | <img src="assets/readme/question.gif" width="300" >  | <img src="assets/readme/end.gif" width="300" > |
 
 
 ## Installation
