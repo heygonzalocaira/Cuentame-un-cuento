@@ -15,8 +15,10 @@ Descripción
 
 |     |     |    |
 | :-: | :-: |:-: |
-|  Scenes | Scenes | Scenes |
-| <img src="assets/Scenes/city.png" width="300" > | <img src="assets/Scenes/dayforest.png" width="300" >  | <img src="assets/Scenes/river.png" width="300" > |
+|  Scenes | Select objects | Select characters |
+| <img src="assets/Readme/scenes.gif" width="300" > | <img src="assets/Readme/ways.gif" width="300" >  | <img src="assets/Readme/select.gif" width="300" > |
+|  Menu | Question Scene | End Scene |
+| <img src="assets/Readme/menu.gif" width="300" > | <img src="assets/Readme/question.gif" width="300" >  | <img src="assets/Readme/end.gif" width="300" > |
 
 
 ## Installation
