@@ -15,10 +15,9 @@ Descripción
 
 |     |     |    |
 | :-: | :-: |:-: |
-|  Scenes | Select objects | Select characters |
-| <img src="assets/readme/scenes.gif" width="300" > | <img src="assets/readme/ways.gif" width="300" >  | <img src="assets/readme/select.gif" width="300" > |
-|  Menu | Question Scene | End Scene |
-| <img src="assets/readme/menu.gif" width="300" > | <img src="assets/readme/question.gif" width="300" >  | <img src="assets/readme/end.gif" width="300" > |
+|  Scenes | End Scene | Select objects |
+| <img src="assets/readme/scenes.gif" width="300" > | <img src="assets/readme/question.gif" width="300" >| <img src="assets/readme/ways.gif" width="300" >  |
+
 
 
 ## Installation
