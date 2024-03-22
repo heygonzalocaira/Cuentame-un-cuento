@@ -5,8 +5,7 @@ import 'package:arma_tu_cuento/StoryScreen/Scenes/QuestionScene.dart';
 import 'package:get/get.dart';
 
 class PreQuestionScenario extends StatefulWidget {
-  PreQuestionScenario({Key key, this.title}) : super(key: key);
-  final String title;
+  PreQuestionScenario({Key? key}) : super(key: key);
 
   @override
   _PreQuestionScenarioState createState() => _PreQuestionScenarioState();
@@ -44,9 +43,7 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                   ),
                   height: 80,
                   width: 320,
-                  child: RaisedButton.icon(
-                    textColor: Colors.black,
-                    color: Colors.white,
+                  child: ElevatedButton.icon(
                     onPressed: () {
                       Get.to(Ouestions()); // Respond to button press
                     },
@@ -65,11 +62,10 @@ class _PreQuestionScenarioState extends State<PreQuestionScenario> {
                   width: 250,
                   child: ConstrainedBox(
                     constraints: BoxConstraints.expand(),
-                    child: FlatButton(
+                    child: TextButton(
                       onPressed: () {
                         /*Get.to(ForestDayScene());*/
                       },
-                      padding: EdgeInsets.all(0.0),
                       child: Image.asset('assets/init/gatopregunta.png'),
                     ),
                   ),

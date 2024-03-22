@@ -9,8 +9,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dar
 import 'package:get/get.dart';
 
 class MountainCityScene extends StatefulWidget {
-  MountainCityScene({Key key, this.title}) : super(key: key);
-  final String title;
+  MountainCityScene({Key? key}) : super(key: key);
 
   @override
   _MountainCitySceneState createState() => _MountainCitySceneState();
@@ -50,14 +49,14 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
                 left: 170,
                 bottom: 90,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 150,
                       height: 150,
@@ -65,7 +64,7 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {});
                     }
                   },
@@ -75,7 +74,7 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                 right: 40,
                 bottom: 90,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 150,
                       height: 150,
@@ -83,7 +82,7 @@ class _MountainCitySceneState extends State<MountainCityScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {
                         Get.to(EndScene());
                         accepted = true;

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class FeedbackContainerImage extends StatelessWidget {
   FeedbackContainerImage({
-    Key key,
-    this.width,
-    this.height,
-    this.imagePath,
+    required this.width,
+    required this.height,
+    required this.imagePath,
+    Key? key,
   }) : super(key: key);
 
   final double width;

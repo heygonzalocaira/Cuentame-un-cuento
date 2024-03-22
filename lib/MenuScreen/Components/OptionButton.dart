@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class OptionButton extends StatelessWidget {
   const OptionButton({
-    Key key,
-    @required this.words,
-    @required this.size_words,
+    required this.words,
+    required this.sizeWords,
+    Key? key,
   }) : super(key: key);
 
   final String words;
-  final double size_words;
+  final double sizeWords;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +26,7 @@ class OptionButton extends StatelessWidget {
           words,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: size_words,
+            fontSize: sizeWords,
           ),
         ),
       ),
@@ -34,16 +34,15 @@ class OptionButton extends StatelessWidget {
   }
 }
 
-
 class ChoiceButton extends StatelessWidget {
   const ChoiceButton({
-    Key key,
-    @required this.words,
-    @required this.size_words,
+    required this.words,
+    required this.sizeWords,
+    Key? key,
   }) : super(key: key);
 
   final String words;
-  final double size_words;
+  final double sizeWords;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -63,7 +62,7 @@ class ChoiceButton extends StatelessWidget {
           words,
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: size_words,
+            fontSize: sizeWords,
           ),
         ),
       ),

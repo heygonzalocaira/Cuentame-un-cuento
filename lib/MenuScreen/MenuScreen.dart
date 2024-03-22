@@ -9,8 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MenuScreen extends StatefulWidget {
-  MenuScreen({Key key, this.title}) : super(key: key);
-  final String title;
+  MenuScreen({Key? key}) : super(key: key);
 
   @override
   _MenuScreenState createState() => _MenuScreenState();
@@ -54,7 +53,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       },
                       child: OptionButton(
                         words: "Empecemos",
-                        size_words: 23.0,
+                        sizeWords: 23.0,
                       ),
                     ),
                   ],

@@ -9,8 +9,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dar
 import 'package:get/get.dart';
 
 class RiverWoodScene extends StatefulWidget {
-  RiverWoodScene({Key key, this.title}) : super(key: key);
-  final String title;
+  RiverWoodScene({Key? key}) : super(key: key);
 
   @override
   _RiverWoodSceneState createState() => _RiverWoodSceneState();
@@ -44,14 +43,14 @@ class _RiverWoodSceneState extends State<RiverWoodScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
                 right: 0,
                 bottom: 5,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 120,
                       height: 200,
@@ -59,7 +58,7 @@ class _RiverWoodSceneState extends State<RiverWoodScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {
                         Get.to(MountainDessertScene());
                         accepted = true;

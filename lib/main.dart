@@ -5,8 +5,7 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
 import 'package:get/get.dart';
-import 'package:audioplayers/audio_cache.dart';
-import 'package:audioplayers/audioplayers.dart';
+
 import 'package:assets_audio_player/assets_audio_player.dart';
 
 void main() => runApp(GetMaterialApp(home: MyApp()));
@@ -20,21 +19,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainScreen(title: 'Arma tu cuento'),
+      home: MainScreen(),
     );
   }
 }
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key key, this.title}) : super(key: key);
-  final String title;
+  MainScreen();
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  AudioCache _audioCache;
-
   final assetsAudioPlayer = AssetsAudioPlayer();
 
   @override

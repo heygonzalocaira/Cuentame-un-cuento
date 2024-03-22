@@ -4,15 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:get/get.dart';
-import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 
 class Stars extends StatefulWidget {
-  Stars({Key key, this.title}) : super(key: key);
-  final String title;
+  Stars({Key? key}) : super(key: key);
 
   @override
   _StarsState createState() => _StarsState();

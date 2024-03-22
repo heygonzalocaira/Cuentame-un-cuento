@@ -10,8 +10,7 @@ import 'package:get/get.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 
 class MountainDessertScene extends StatefulWidget {
-  MountainDessertScene({Key key, this.title}) : super(key: key);
-  final String title;
+  MountainDessertScene({Key? key}) : super(key: key);
 
   @override
   _MountainDessertSceneState createState() => _MountainDessertSceneState();
@@ -51,14 +50,14 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
                 left: 90,
                 top: 50,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 180,
                       height: 180,
@@ -66,7 +65,7 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {
                         Get.to(MountainScene());
                         accepted = true;
@@ -79,7 +78,7 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
                 right: 90,
                 top: 50,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 180,
                       height: 180,
@@ -87,7 +86,7 @@ class _MountainDessertSceneState extends State<MountainDessertScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       Get.to(MountainDessertFailScene());
                     }
                   },

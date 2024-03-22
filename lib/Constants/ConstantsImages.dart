@@ -28,10 +28,10 @@ class ConstantsImages {
   static const String img_back = 'assets/Objects/back.png';
   static const String img_settings = 'assets/Objects/settings.png';
 
-  String img_character = '';
+  String imgCharacter = '';
 
-  void set_image_character(String text) {
-    this.img_character = text;
+  void setImageCharacter(String text) {
+    this.imgCharacter = text;
   }
 }
 

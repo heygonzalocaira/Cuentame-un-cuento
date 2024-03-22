@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class MainBackground extends StatelessWidget {
   const MainBackground({
-    Key key,
-    @required this.widthScreen,
-    @required this.heightScreen,
-    @required this.imagePath,
+    required this.widthScreen,
+    required this.heightScreen,
+    required this.imagePath,
+    Key? key,
   }) : super(key: key);
 
   final double widthScreen;

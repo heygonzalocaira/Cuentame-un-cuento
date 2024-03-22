@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/MenuScreen/Components/OptionButton.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/CityDayScene.dart';
 import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
-import 'package:carousel_slider/carousel_controller.dart';
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
 
 final List<String> imgList = [
   'https://image.freepik.com/vector-gratis/ilustracion-vector-dibujos-animados-lindo-corgi-beber-leche-te-boba-bebida-animal-concepto-aislado-vector-estilo-dibujos-animados-plana_138676-1943.jpg',
@@ -32,25 +27,25 @@ final List<Widget> imageSliders = imgList
                         switch (imgList.indexOf(item)) {
                           case 0:
                             {
-                              character.set_image_character(
+                              character.setImageCharacter(
                                   "assets/Characters/dog.gif");
                             }
                             break;
                           case 1:
                             {
-                              character.set_image_character(
+                              character.setImageCharacter(
                                   "assets/Characters/cat.gif");
                             }
                             break;
                           case 2:
                             {
-                              character.set_image_character(
+                              character.setImageCharacter(
                                   "assets/Characters/tortuga.png");
                             }
                             break;
                           case 3:
                             {
-                              character.set_image_character(
+                              character.setImageCharacter(
                                   "assets/Characters/rabiit.gif");
                             }
                             break;
@@ -79,28 +74,27 @@ final List<Widget> imageSliders = imgList
                                       name: "Fido el Perro",
                                     );
                                   }
-                                  break;
+
                                 case 1:
                                   {
                                     return NameOfCharacter(
                                       name: "Felix el Gato",
                                     );
                                   }
-                                  break;
+
                                 case 2:
                                   {
                                     return NameOfCharacter(
                                       name: "Luis la Tortuga",
                                     );
                                   }
-                                  break;
+
                                 case 3:
                                   {
                                     return NameOfCharacter(
                                       name: "Max el Conejo",
                                     );
                                   }
-                                  break;
                               }
                             }())),
                       ),
@@ -113,8 +107,8 @@ final List<Widget> imageSliders = imgList
 
 class NameOfCharacter extends StatelessWidget {
   const NameOfCharacter({
-    this.name,
-    Key key,
+    required this.name,
+    Key? key,
   }) : super(key: key);
   final String name;
   @override
@@ -161,8 +155,7 @@ class _ManuallyControlledSliderState extends State<ManuallyControlledSlider> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Flexible(
-                child: RaisedButton(
-                  color: Colors.white,
+                child: ElevatedButton(
                   onPressed: () => _controller.previousPage(),
                   child: Text(
                     '←',
@@ -174,8 +167,7 @@ class _ManuallyControlledSliderState extends State<ManuallyControlledSlider> {
                 ),
               ),
               Flexible(
-                child: RaisedButton(
-                  color: Colors.white,
+                child: ElevatedButton(
                   onPressed: () => _controller.nextPage(),
                   child: Text(
                     '→',
@@ -195,8 +187,7 @@ class _ManuallyControlledSliderState extends State<ManuallyControlledSlider> {
 }
 
 class SelectCharacterScreen extends StatefulWidget {
-  SelectCharacterScreen({Key key, this.title}) : super(key: key);
-  final String title;
+  SelectCharacterScreen({Key? key}) : super(key: key);
 
   @override
   _SelectCharacterScreenState createState() => _SelectCharacterScreenState();
@@ -241,9 +232,7 @@ class _SelectCharacterScreenState extends State<SelectCharacterScreen> {
                   ),
                   height: 80,
                   width: 320,
-                  child: RaisedButton.icon(
-                    textColor: Colors.black,
-                    color: Colors.white,
+                  child: ElevatedButton.icon(
                     onPressed: () {},
                     icon: Icon(Icons.add, size: 0),
                     label: Text(

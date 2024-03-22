@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/ForestDayScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
@@ -11,8 +10,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dar
 import 'package:get/get.dart';
 
 class ForestNightScene extends StatefulWidget {
-  ForestNightScene({Key key, this.title}) : super(key: key);
-  final String title;
+  ForestNightScene({Key? key}) : super(key: key);
 
   @override
   _ForestNightSceneState createState() => _ForestNightSceneState();
@@ -46,14 +44,14 @@ class _ForestNightSceneState extends State<ForestNightScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
                 right: 2,
                 bottom: 5,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 150,
                       height: 180,
@@ -61,7 +59,7 @@ class _ForestNightSceneState extends State<ForestNightScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {
                         Get.to(ForestDayScene());
                         accepted = true;

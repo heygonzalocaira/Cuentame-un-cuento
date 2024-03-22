@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
@@ -11,8 +10,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dar
 import 'package:get/get.dart';
 
 class ForestDayScene extends StatefulWidget {
-  ForestDayScene({Key key, this.title}) : super(key: key);
-  final String title;
+  ForestDayScene({Key? key}) : super(key: key);
 
   @override
   _ForestDaySceneState createState() => _ForestDaySceneState();
@@ -46,14 +44,14 @@ class _ForestDaySceneState extends State<ForestDayScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
                 right: 10,
                 bottom: 5,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 150,
                       height: 180,
@@ -61,7 +59,7 @@ class _ForestDaySceneState extends State<ForestDayScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {
                         Get.to(RiverScene());
                         accepted = true;

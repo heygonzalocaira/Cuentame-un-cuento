@@ -10,8 +10,7 @@ import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverWoodScene.dart';
 import 'package:get/get.dart';
 
 class RiverScene extends StatefulWidget {
-  RiverScene({Key key, this.title}) : super(key: key);
-  final String title;
+  RiverScene({Key? key}) : super(key: key);
 
   @override
   _RiverSceneState createState() => _RiverSceneState();
@@ -51,7 +50,7 @@ class _RiverSceneState extends State<RiverScene> {
                   height: 180,
                   decoration: new BoxDecoration(
                     image: new DecorationImage(
-                      image: ExactAssetImage(character.img_character),
+                      image: ExactAssetImage(character.imgCharacter),
                       fit: BoxFit.fitWidth,
                     ),
                   ),
@@ -111,7 +110,7 @@ class _RiverSceneState extends State<RiverScene> {
                 bottom: 30,
                 left: 280,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 160,
                       height: 120,
@@ -127,7 +126,6 @@ class _RiverSceneState extends State<RiverScene> {
                     } else {
                       Get.to(RiverFailScene());
                     }
-                    ;
                   },
                 ),
               ),
@@ -164,7 +162,7 @@ class _RiverSceneState extends State<RiverScene> {
 //                top: 100,
 //                left: 400,
 //                child: DragTarget(
-//                  builder: (context, List<String> data, rj) {
+//                  builder: (context,__,_) {
 //                    return Container(
 //                      color: warnaBg,
 //                      width: 100,

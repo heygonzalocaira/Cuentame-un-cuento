@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_volume_slider/flutter_volume_slider.dart';
+
 import 'package:arma_tu_cuento/MenuScreen/MenuScreen.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
@@ -41,11 +41,11 @@ class TopButtons extends StatelessWidget {
                       padding: EdgeInsets.all(10.0),
                       child: Column(
                         children: <Widget>[
-                          FlutterVolumeSlider(
-                            display: Display.HORIZONTAL,
-                            sliderActiveColor: Colors.blue,
-                            sliderInActiveColor: Colors.grey,
-                          ),
+                          // FlutterVolumeSlider(
+                          //   display: Display.HORIZONTAL,
+                          //   sliderActiveColor: Colors.blue,
+                          //   sliderInActiveColor: Colors.grey,
+                          // ),
                         ],
                       ),
                     ),

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/PreQuestionScene.dart';
 import 'package:get/get.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
@@ -11,8 +10,7 @@ import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:particles_flutter/particles_flutter.dart';
 
 class EndScene extends StatefulWidget {
-  EndScene({Key key, this.title}) : super(key: key);
-  final String title;
+  EndScene({Key? key}) : super(key: key);
 
   @override
   _EndSceneState createState() => _EndSceneState();

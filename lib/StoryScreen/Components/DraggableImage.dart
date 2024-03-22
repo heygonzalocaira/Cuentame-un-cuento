@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 
 class DraggableImage extends StatelessWidget {
   DraggableImage({
-    Key key,
-    this.width,
-    this.height,
-    this.imagePath,
+    required this.width,
+    required this.height,
+    required this.imagePath,
+    Key? key,
   }) : super(key: key);
 
   final double width;

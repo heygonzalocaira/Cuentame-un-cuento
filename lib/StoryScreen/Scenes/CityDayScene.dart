@@ -1,5 +1,4 @@
 import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
-import 'package:arma_tu_cuento/Constants/ConstantsAudios.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
@@ -9,8 +8,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
 import 'package:get/get.dart';
 
 class CityDayScene extends StatefulWidget {
-  CityDayScene({Key key, this.title}) : super(key: key);
-  final String title;
+  CityDayScene({Key? key}) : super(key: key);
 
   @override
   _CityDaySceneState createState() => _CityDaySceneState();
@@ -56,7 +54,7 @@ class _CityDaySceneState extends State<CityDayScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
@@ -74,7 +72,7 @@ class _CityDaySceneState extends State<CityDayScene> {
                 right: 150,
                 top: 0,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return ContainerImage(
                       width: 130,
                       height: 150,

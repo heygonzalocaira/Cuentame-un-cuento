@@ -9,8 +9,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dar
 import 'package:get/get.dart';
 
 class MountainScene extends StatefulWidget {
-  MountainScene({Key key, this.title}) : super(key: key);
-  final String title;
+  MountainScene({Key? key}) : super(key: key);
 
   @override
   _MountainSceneState createState() => _MountainSceneState();
@@ -50,14 +49,14 @@ class _MountainSceneState extends State<MountainScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
                 right: 140,
                 bottom: 40,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return FeedbackContainerImage(
                       width: 130,
                       height: 130,
@@ -65,7 +64,7 @@ class _MountainSceneState extends State<MountainScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {
                         Get.to(MountainCityScene());
                         accepted = true;

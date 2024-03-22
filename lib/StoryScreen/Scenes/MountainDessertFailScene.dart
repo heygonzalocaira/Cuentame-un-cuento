@@ -1,18 +1,14 @@
 import 'package:arma_tu_cuento/StoryScreen/Scenes/MountainDessertScene.dart';
-import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverScene.dart';
 import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 
-import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverWoodScene.dart';
 import 'package:get/get.dart';
 
 class MountainDessertFailScene extends StatefulWidget {
-  MountainDessertFailScene({Key key, this.title}) : super(key: key);
-  final String title;
+  MountainDessertFailScene({Key? key}) : super(key: key);
 
   @override
   _MountainDessertFailSceneState createState() =>

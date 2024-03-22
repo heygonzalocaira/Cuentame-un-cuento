@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:arma_tu_cuento/Components/MainBackground.dart';
 //import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/BottomButtons.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/StoryScreen/Scenes/ForestNightScene.dart';
 import 'package:arma_tu_cuento/StoryScreen/Components/DraggableImage.dart';
@@ -10,8 +9,7 @@ import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
 import 'package:get/get.dart';
 
 class CityNightScene extends StatefulWidget {
-  CityNightScene({Key key, this.title}) : super(key: key);
-  final String title;
+  CityNightScene({Key? key}) : super(key: key);
 
   @override
   _CityNightSceneState createState() => _CityNightSceneState();
@@ -50,14 +48,14 @@ class _CityNightSceneState extends State<CityNightScene> {
                     : DraggableImage(
                         width: 120,
                         height: 120,
-                        imagePath: character.img_character,
+                        imagePath: character.imgCharacter,
                       ),
               ),
               Positioned(
                 right: 10,
                 bottom: 5,
                 child: DragTarget(
-                  builder: (context, List<String> data, rj) {
+                  builder: (context, __, _) {
                     return ContainerImage(
                       width: 150,
                       height: 150,
@@ -65,7 +63,7 @@ class _CityNightSceneState extends State<CityNightScene> {
                     );
                   },
                   onAccept: (data) {
-                    if (data == character.img_character) {
+                    if (data == character.imgCharacter) {
                       setState(() {
                         Get.to(ForestNightScene());
                         accepted = true;

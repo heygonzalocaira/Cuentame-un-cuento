@@ -4,14 +4,11 @@ import 'package:arma_tu_cuento/Components/MainBackground.dart';
 import 'package:arma_tu_cuento/Components/ContainerImage.dart';
 import 'package:arma_tu_cuento/MenuScreen/Components/TopButtons.dart';
 import 'package:arma_tu_cuento/Constants/ConstantsImages.dart';
-import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dart';
 import 'dart:math' as math;
-import 'package:arma_tu_cuento/StoryScreen/Scenes/RiverWoodScene.dart';
 import 'package:get/get.dart';
 
 class RiverFailScene extends StatefulWidget {
-  RiverFailScene({Key key, this.title}) : super(key: key);
-  final String title;
+  RiverFailScene({Key? key}) : super(key: key);
 
   @override
   _RiverFailSceneState createState() => _RiverFailSceneState();
@@ -65,7 +62,7 @@ class _RiverFailSceneState extends State<RiverFailScene> {
                         height: 120,
                         decoration: new BoxDecoration(
                           image: new DecorationImage(
-                            image: ExactAssetImage(character.img_character),
+                            image: ExactAssetImage(character.imgCharacter),
                             fit: BoxFit.fitWidth,
                           ),
                         ),

@@ -9,8 +9,7 @@ import 'package:arma_tu_cuento/StoryScreen/Components/FeedbackContainerImage.dar
 import 'package:get/get.dart';
 
 class Ouestions extends StatefulWidget {
-  Ouestions({Key key, this.title}) : super(key: key);
-  final String title;
+  Ouestions({Key? key}) : super(key: key);
 
   @override
   _OuestionsState createState() => _OuestionsState();
@@ -48,9 +47,7 @@ class _OuestionsState extends State<Ouestions> {
                   ),
                   height: 100,
                   width: 430,
-                  child: RaisedButton.icon(
-                    textColor: Colors.black,
-                    color: Colors.white,
+                  child: ElevatedButton.icon(
                     onPressed: () {
                       Get.to(
                         Ouestions(),
@@ -110,9 +107,9 @@ class _OuestionsState extends State<Ouestions> {
 
 class AlternativeImage extends StatelessWidget {
   const AlternativeImage({
-    Key key,
-    this.imagePATH,
-    this.text,
+    required this.imagePATH,
+    required this.text,
+    Key? key,
   }) : super(key: key);
 
   final String imagePATH;
@@ -123,7 +120,7 @@ class AlternativeImage extends StatelessWidget {
       children: <Widget>[
         ChoiceButton(
           words: text,
-          size_words: 23.0,
+          sizeWords: 23.0,
         ),
         Positioned(
           left: 50,
